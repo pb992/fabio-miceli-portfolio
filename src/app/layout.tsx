@@ -2,8 +2,6 @@ import type { Metadata } from "next";
 import { Inter, Manrope } from "next/font/google";
 import "./globals.css";
 import SocialSidebar from "@/components/SocialSidebar";
-import { ThemeProvider } from "@/components/ThemeProvider";
-import ThemeToggle from "@/components/ThemeToggle";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -87,21 +85,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="it" className={`dark ${inter.variable} ${manrope.variable}`} suppressHydrationWarning>
-      <head>
-        {/* Prevent flash of wrong theme: read localStorage before first paint */}
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `(function(){try{var t=localStorage.getItem('theme');if(t==='light'){document.documentElement.classList.remove('dark')}else{document.documentElement.classList.add('dark')}}catch(e){}})();`,
-          }}
-        />
-      </head>
+    <html lang="it" className={`dark ${inter.variable} ${manrope.variable}`}>
       <body className="font-sans antialiased">
-        <ThemeProvider>
-          <ThemeToggle />
-          {children}
-          <SocialSidebar />
-        </ThemeProvider>
+        {children}
+        <SocialSidebar />
       </body>
     </html>
   );
