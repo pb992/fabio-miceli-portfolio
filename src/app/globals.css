@@ -159,6 +159,16 @@ button, a, [role="button"] {
   box-shadow: none;
 }
 
+/* Marquee animation */
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  animation: marquee 25s linear infinite;
+}
+
 div#devtools-indicator.nextjs-toast {
   display: none !important;
 }

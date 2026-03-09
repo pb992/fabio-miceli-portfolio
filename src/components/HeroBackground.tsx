@@ -93,11 +93,11 @@ void main() {
   float n2 = snoise(vec3(warpedUv * 2.5 + 3.0, t * 1.2 + 10.0));
   float n3 = snoise(vec3(warpedUv * 4.0 + 7.0, t * 1.6 + 20.0));
   float combined = n1 * 0.5 + n2 * 0.35 + n3 * 0.15;
-  float band = smoothstep(-0.1, 0.4, combined) * smoothstep(1.0, 0.5, combined);
-  vec3 deepPurple = vec3(0.263, 0.220, 0.792);
-  vec3 electricBlue = vec3(0.231, 0.510, 0.965);
-  vec3 cyan = vec3(0.133, 0.827, 0.933);
-  vec3 pink = vec3(0.925, 0.282, 0.600);
+  float band = smoothstep(-0.3, 0.3, combined) * smoothstep(1.1, 0.4, combined);
+  vec3 deepPurple = vec3(0.35, 0.25, 0.95);
+  vec3 electricBlue = vec3(0.28, 0.55, 1.0);
+  vec3 cyan = vec3(0.15, 0.90, 0.98);
+  vec3 pink = vec3(0.95, 0.30, 0.65);
   float colorMix = combined * 0.5 + 0.5;
   vec3 color;
   if (colorMix < 0.33) {
@@ -109,11 +109,13 @@ void main() {
   }
   float pinkMask = smoothstep(0.4, 0.7, n3) * 0.4;
   color = mix(color, pink, pinkMask);
-  float alpha = band * 0.7;
-  float vignette = 1.0 - smoothstep(0.3, 0.85, length(uv - 0.5));
+  float alpha = band * 1.3;
+  alpha = min(alpha, 1.0);
+  float vignette = 1.0 - smoothstep(0.65, 1.2, length(uv - 0.5));
   alpha *= vignette;
-  float centerGlow = smoothstep(0.5, 0.0, length(uv - vec2(0.5, 0.45))) * 0.15;
+  float centerGlow = smoothstep(0.7, 0.0, length(uv - vec2(0.5, 0.45))) * 0.4;
   alpha += centerGlow;
+  alpha = min(alpha, 1.0);
   gl_FragColor = vec4(color, alpha);
 }
 `
@@ -198,7 +200,7 @@ export default function HeroBackground() {
   }
 
   return (
-    <div ref={containerRef} className="absolute inset-0 z-0 opacity-75">
+    <div ref={containerRef} className="absolute inset-0 z-0">
       <Canvas
         camera={{ position: [0, 0, 1], fov: 75 }}
         style={{ background: 'transparent' }}

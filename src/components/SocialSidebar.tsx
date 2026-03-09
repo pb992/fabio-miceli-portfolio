@@ -7,13 +7,13 @@ const socialLinks = [
   {
     name: 'GitHub',
     icon: Github,
-    href: 'https://github.com/fabio-miceli',
+    href: 'https://github.com/pb992',
     color: 'hover:text-gray-800 dark:hover:text-white'
   },
   {
     name: 'LinkedIn',
     icon: Linkedin,
-    href: 'https://linkedin.com/in/fabio-miceli',
+    href: 'https://www.linkedin.com/in/fabio-miceli-00a0b166/',
     color: 'hover:text-blue-600 dark:hover:text-blue-400'
   },
   {

@@ -1,7 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { Heart } from 'lucide-react'
+import Link from 'next/link'
 
 export default function Footer() {
   return (
@@ -19,26 +19,22 @@ export default function Footer() {
           </div>
 
           <div className="flex flex-wrap justify-center gap-6 text-sm text-neutral-500">
-            <a
-              href="#"
-              className="hover:text-white transition-colors duration-300"
-            >
-              Privacy Policy
-            </a>
+            <Link href="/progetti" className="hover:text-white transition-colors duration-300">
+              Progetti
+            </Link>
             <span className="text-neutral-600">•</span>
-            <a
-              href="#"
-              className="hover:text-white transition-colors duration-300"
-            >
-              Cookie Policy
+            <Link href="/about" className="hover:text-white transition-colors duration-300">
+              Chi sono
+            </Link>
+            <span className="text-neutral-600">•</span>
+            <a href="#" className="hover:text-white transition-colors duration-300">
+              Privacy Policy
             </a>
           </div>
 
-          <div className="flex items-center justify-center gap-2 text-sm text-neutral-500">
-            <span>Made with</span>
-            <Heart className="w-4 h-4 text-red-500 fill-current" />
-            <span>passion</span>
-          </div>
+          <p className="text-sm text-neutral-600">
+            Progettato e sviluppato da Fabio Miceli
+          </p>
         </motion.div>
       </div>
     </footer>

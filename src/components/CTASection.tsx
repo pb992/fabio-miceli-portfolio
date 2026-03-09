@@ -132,7 +132,7 @@ export default function CTASection() {
             </MagneticButton>
             <MagneticButton strength={0.2}>
               <a
-                href="https://linkedin.com/in/fabio-miceli"
+                href="https://www.linkedin.com/in/fabio-miceli-00a0b166/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 bg-white/20 hover:bg-white/30 text-white px-6 py-3 rounded-lg font-medium transition-all duration-300 transform hover:scale-105"
@@ -143,7 +143,7 @@ export default function CTASection() {
             </MagneticButton>
             <MagneticButton strength={0.2}>
               <a
-                href="https://github.com/fabio-miceli"
+                href="https://github.com/pb992"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 bg-white/20 hover:bg-white/30 text-white px-6 py-3 rounded-lg font-medium transition-all duration-300 transform hover:scale-105"

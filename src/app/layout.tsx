@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter, Manrope } from "next/font/google";
 import "./globals.css";
 import SocialSidebar from "@/components/SocialSidebar";
+import Navbar from "@/components/Navbar";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -87,6 +88,7 @@ export default function RootLayout({
   return (
     <html lang="it" className={`dark ${inter.variable} ${manrope.variable}`}>
       <body className="font-sans antialiased">
+        <Navbar />
         {children}
         <SocialSidebar />
       </body>
