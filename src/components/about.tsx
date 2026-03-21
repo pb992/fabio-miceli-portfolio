@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion'
 import { Music, Dumbbell, MapPin, Code, Users, Zap } from 'lucide-react'
+import Image from 'next/image'
 
 const cardVariants = {
   hidden: { opacity: 0, y: 20 },
@@ -45,20 +46,35 @@ export function About() {
             variants={cardVariants}
             className="sm:col-span-2 glass rounded-2xl p-6 sm:p-8"
           >
-            <div className="flex items-center gap-3 mb-4">
-              <div className="w-10 h-10 rounded-xl bg-linear-to-br from-violet-500 to-blue-500 flex items-center justify-center">
-                <Code className="w-5 h-5 text-white" />
+            <div className="flex flex-col sm:flex-row gap-6">
+              <div className="shrink-0 mx-auto sm:mx-0">
+                <div className="w-32 h-40 rounded-2xl overflow-hidden border border-white/10">
+                  <Image
+                    src="/fabio_miceli2.jpg"
+                    alt="Fabio Miceli"
+                    width={128}
+                    height={160}
+                    className="w-full h-full object-cover object-top"
+                  />
+                </div>
               </div>
-              <h3 className="text-lg font-bold text-white">La mia storia</h3>
+              <div>
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="w-10 h-10 rounded-xl bg-linear-to-br from-violet-500 to-blue-500 flex items-center justify-center">
+                    <Code className="w-5 h-5 text-white" />
+                  </div>
+                  <h3 className="text-lg font-bold text-white">La mia storia</h3>
+                </div>
+                <p className="text-white/60 leading-relaxed mb-3">
+                  Mi chiamo Fabio. Scrivo codice di giorno e suono piano, batteria e chitarra quando stacco.
+                  In 4 anni ho lavorato con stack, team e settori diversi.
+                </p>
+                <p className="text-white/60 leading-relaxed">
+                  Sono curioso per natura: ogni progetto &egrave; una nuova opportunit&agrave; per imparare qualcosa,
+                  e a me le sfide piacciono. La versatilit&agrave; &egrave; il mio punto di forza.
+                </p>
+              </div>
             </div>
-            <p className="text-white/60 leading-relaxed mb-3">
-              Mi chiamo Fabio. Scrivo codice di giorno e suono piano, batteria e chitarra quando stacco.
-              In 4 anni ho lavorato con stack, team e settori diversi.
-            </p>
-            <p className="text-white/60 leading-relaxed">
-              Sono curioso per natura: ogni progetto &egrave; una nuova opportunit&agrave; per imparare qualcosa,
-              e a me le sfide piacciono. La versatilit&agrave; &egrave; il mio punto di forza.
-            </p>
           </motion.div>
 
           {/* Stats card */}
@@ -70,18 +86,14 @@ export function About() {
             variants={cardVariants}
             className="glass rounded-2xl p-6 sm:p-8 flex flex-col justify-center"
           >
-            <div className="space-y-6">
+            <div className="space-y-8">
               <div className="text-center">
-                <p className="text-4xl font-bold gradient-text">4+</p>
-                <p className="text-xs text-white/40 mt-1">Anni di esperienza</p>
+                <p className="text-5xl font-bold gradient-text">4+</p>
+                <p className="text-sm text-white/40 mt-2">Anni di esperienza</p>
               </div>
               <div className="text-center">
-                <p className="text-4xl font-bold gradient-text">10+</p>
-                <p className="text-xs text-white/40 mt-1">Progetti consegnati</p>
-              </div>
-              <div className="text-center">
-                <p className="text-4xl font-bold gradient-text">100%</p>
-                <p className="text-xs text-white/40 mt-1">Clienti soddisfatti</p>
+                <p className="text-5xl font-bold gradient-text">100%</p>
+                <p className="text-sm text-white/40 mt-2">Clienti soddisfatti</p>
               </div>
             </div>
           </motion.div>
@@ -156,8 +168,8 @@ export function About() {
                 <h3 className="text-lg font-bold text-white mb-2">Come lavoro</h3>
                 <p className="text-white/50 leading-relaxed">
                   Freelancer con un team agile: zero burocrazia, comunicazione diretta, risultati concreti.
-                  Il mio obiettivo &egrave; bilanciare codice, viaggi e concerti - e per farlo,
-                  consegno veloce e bene.
+                  Mi piace lavorare da dove voglio, organizzarmi i tempi e dedicare energia
+                  anche a quello che amo fuori dallo schermo.
                 </p>
               </div>
             </div>
