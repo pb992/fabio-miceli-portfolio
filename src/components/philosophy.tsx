@@ -47,7 +47,7 @@ export function Philosophy() {
             <span className="gradient-text">Vendo velocità e impatto.</span>
           </h2>
           <p className="text-white/50 max-w-2xl mx-auto text-lg leading-relaxed">
-            Un approccio ibrido che unisce la profondità di un\'agenzia alla velocità di un freelance. 
+            Un approccio ibrido che unisce la profondità di un&apos;agenzia alla velocità di un freelance. 
             Lavoro con te, non per te.
           </p>
         </motion.div>
