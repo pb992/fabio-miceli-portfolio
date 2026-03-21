@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion'
 import Image from 'next/image'
+import { useTranslations } from 'next-intl'
 
 const collaborators = [
   { name: 'Pro Advice Solutions', logo: '/logos/proadvice-logo.png' },
@@ -19,6 +20,8 @@ const collaborators = [
 const doubledCollaborators = [...collaborators, ...collaborators]
 
 export function Collaborations() {
+  const t = useTranslations('collaborations')
+
   return (
     <section className="relative py-20">
       <div className="absolute top-0 left-0 right-0 h-px divider-glow" />
@@ -32,7 +35,7 @@ export function Collaborations() {
           className="text-center"
         >
           <span className="text-sm font-medium text-white/40 uppercase tracking-widest">
-            Collaborazioni
+            {t('label')}
           </span>
         </motion.div>
       </div>

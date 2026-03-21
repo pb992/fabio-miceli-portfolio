@@ -2,29 +2,32 @@
 
 import { motion } from 'framer-motion'
 import { Target, Zap, TrendingUp } from 'lucide-react'
-
-const pillars = [
-  {
-    icon: Target,
-    title: 'Strategia',
-    description: 'Ogni progetto parte da un\'analisi approfondita. Capisco i tuoi obiettivi prima di scrivere una riga di codice.',
-    gradient: 'from-violet-500 to-purple-600',
-  },
-  {
-    icon: Zap,
-    title: 'Esecuzione',
-    description: 'Metodologia agile, iterazioni rapide, feedback costante. Risultati tangibili in settimane, non mesi.',
-    gradient: 'from-blue-500 to-cyan-500',
-  },
-  {
-    icon: TrendingUp,
-    title: 'Risultati',
-    description: 'Non consegno progetti, ma soluzioni che funzionano. Misuro il successo con i tuoi KPI, non con le righe di codice.',
-    gradient: 'from-amber-500 to-orange-500',
-  },
-]
+import { useTranslations } from 'next-intl'
 
 export function Philosophy() {
+  const t = useTranslations('philosophy')
+
+  const pillars = [
+    {
+      icon: Target,
+      title: t('strategy.title'),
+      description: t('strategy.description'),
+      gradient: 'from-violet-500 to-purple-600',
+    },
+    {
+      icon: Zap,
+      title: t('execution.title'),
+      description: t('execution.description'),
+      gradient: 'from-blue-500 to-cyan-500',
+    },
+    {
+      icon: TrendingUp,
+      title: t('results.title'),
+      description: t('results.description'),
+      gradient: 'from-amber-500 to-orange-500',
+    },
+  ]
+
   return (
     <section id="chi-sono" className="relative py-24 sm:py-32">
       {/* Section divider */}
@@ -40,15 +43,14 @@ export function Philosophy() {
           className="text-center mb-16"
         >
           <span className="text-sm font-medium text-violet-400 uppercase tracking-widest mb-4 block">
-            Filosofia
+            {t('label')}
           </span>
           <h2 className="font-(family-name:--font-manrope) text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-6">
-            Non vendo codice.<br />
-            <span className="gradient-text">Vendo velocità e impatto.</span>
+            {t('title1')}<br />
+            <span className="gradient-text">{t('title2')}</span>
           </h2>
           <p className="text-white/50 max-w-2xl mx-auto text-lg leading-relaxed">
-            Un approccio ibrido che unisce la profondità di un&apos;agenzia alla velocità di un freelance. 
-            Lavoro con te, non per te.
+            {t('subtitle')}
           </p>
         </motion.div>
 
@@ -65,7 +67,7 @@ export function Philosophy() {
             >
               <div className="h-full glass rounded-2xl p-8 relative overflow-hidden transition-all duration-500 hover:glow-violet card-3d">
                 {/* Gradient background on hover */}
-                <div 
+                <div
                   className={`absolute inset-0 bg-linear-to-br ${pillar.gradient} opacity-0 group-hover:opacity-5 transition-opacity duration-500`}
                 />
 

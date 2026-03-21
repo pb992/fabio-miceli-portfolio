@@ -4,16 +4,23 @@ import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Menu, X } from 'lucide-react'
 import Link from 'next/link'
-
-const navLinks = [
-  { href: '#skills', label: 'Skills' },
-  { href: '#progetti', label: 'Progetti' },
-  { href: '#chi-sono', label: 'Chi sono' },
-]
+import { useTranslations, useLocale } from 'next-intl'
+import { useRouter, usePathname } from '@/i18n/navigation'
 
 export function Navbar() {
+  const t = useTranslations('nav')
+  const locale = useLocale()
+  const router = useRouter()
+  const pathname = usePathname()
+
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+
+  const navLinks = [
+    { href: '#skills', label: t('skills') },
+    { href: '#progetti', label: t('projects') },
+    { href: '#chi-sono', label: t('about') },
+  ]
 
   useEffect(() => {
     const handleScroll = () => {
@@ -23,6 +30,10 @@ export function Navbar() {
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
+  const toggleLocale = () => {
+    router.replace(pathname, { locale: locale === 'it' ? 'en' : 'it' })
+  }
+
   return (
     <>
       <motion.header
@@ -30,19 +41,19 @@ export function Navbar() {
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-          isScrolled 
-            ? 'py-3 glass-strong' 
+          isScrolled
+            ? 'py-3 glass-strong'
             : 'py-5 bg-transparent'
         }`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <nav className="flex items-center justify-between">
             {/* Logo */}
-            <Link 
-              href="/" 
+            <Link
+              href="/"
               className="relative group"
             >
-              <motion.span 
+              <motion.span
                 className="text-2xl font-bold font-(family-name:--font-manrope) tracking-tight"
                 whileHover={{ scale: 1.05 }}
                 transition={{ type: 'spring', stiffness: 400, damping: 17 }}
@@ -65,13 +76,19 @@ export function Navbar() {
                   <span className="absolute -bottom-1 left-0 w-0 h-px bg-linear-to-r from-violet-500 to-blue-500 group-hover:w-full transition-all duration-300" />
                 </Link>
               ))}
+              <button
+                onClick={toggleLocale}
+                className="px-3 py-1.5 rounded-full text-xs font-semibold text-white/70 hover:text-white border border-white/20 hover:border-violet-500/50 transition-all duration-300 uppercase tracking-wider"
+              >
+                {locale === 'it' ? 'EN' : 'IT'}
+              </button>
               <Link href="#contatti">
                 <motion.button
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
                   className="px-5 py-2.5 rounded-full text-sm font-medium bg-linear-to-r from-violet-600 to-blue-600 text-white shadow-lg shadow-violet-500/20 hover:shadow-violet-500/40 transition-shadow duration-300"
                 >
-                  Contattami
+                  {t('contact')}
                 </motion.button>
               </Link>
             </div>
@@ -120,9 +137,21 @@ export function Navbar() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.3 }}
               >
+                <button
+                  onClick={() => { toggleLocale(); setIsMobileMenuOpen(false) }}
+                  className="px-6 py-2 rounded-full text-base font-semibold text-white/70 border border-white/20 uppercase tracking-wider"
+                >
+                  {locale === 'it' ? 'EN' : 'IT'}
+                </button>
+              </motion.div>
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.4 }}
+              >
                 <Link href="#contatti" onClick={() => setIsMobileMenuOpen(false)}>
                   <button className="px-8 py-3 rounded-full text-lg font-medium bg-linear-to-r from-violet-600 to-blue-600 text-white">
-                    Contattami
+                    {t('contact')}
                   </button>
                 </Link>
               </motion.div>

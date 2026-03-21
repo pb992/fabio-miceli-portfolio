@@ -3,6 +3,7 @@
 import { useState } from 'react'
 import { motion } from 'framer-motion'
 import { Mail, Phone, Linkedin, Github, Send } from 'lucide-react'
+import { useTranslations } from 'next-intl'
 
 const contactLinks = [
   {
@@ -28,6 +29,7 @@ const contactLinks = [
 ]
 
 export function CTASection() {
+  const t = useTranslations('cta')
   const [name, setName] = useState('')
   const [message, setMessage] = useState('')
 
@@ -44,7 +46,7 @@ export function CTASection() {
 
       {/* Background gradient */}
       <div className="absolute inset-0 overflow-hidden">
-        <div 
+        <div
           className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] rounded-full opacity-20"
           style={{
             background: 'radial-gradient(circle, rgba(129, 140, 248, 0.3) 0%, transparent 70%)',
@@ -63,12 +65,12 @@ export function CTASection() {
           className="text-center mb-12"
         >
           <h2 className="font-(family-name:--font-manrope) text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4 leading-tight text-balance">
-            Non serve essere una grande azienda
+            {t('title1')}
             <br />
-            <span className="gradient-text">per avere una grande idea.</span>
+            <span className="gradient-text">{t('title2')}</span>
           </h2>
           <p className="text-white/50 text-lg">
-            Parliamone. Nessun impegno, solo una chiacchierata.
+            {t('subtitle')}
           </p>
         </motion.div>
 
@@ -83,27 +85,27 @@ export function CTASection() {
           <form onSubmit={handleSubmit} className="space-y-4">
             <div>
               <label htmlFor="name" className="block text-sm font-medium text-white/60 mb-2">
-                Il tuo nome
+                {t('nameLabel')}
               </label>
               <input
                 type="text"
                 id="name"
                 value={name}
                 onChange={(e) => setName(e.target.value)}
-                placeholder="Come ti chiami?"
+                placeholder={t('namePlaceholder')}
                 required
                 className="w-full px-4 py-3 rounded-xl bg-white/5 border border-white/10 text-white placeholder-white/30 focus:border-violet-500 focus:ring-1 focus:ring-violet-500 focus:outline-none transition-all"
               />
             </div>
             <div>
               <label htmlFor="message" className="block text-sm font-medium text-white/60 mb-2">
-                Il tuo messaggio
+                {t('messageLabel')}
               </label>
               <textarea
                 id="message"
                 value={message}
                 onChange={(e) => setMessage(e.target.value)}
-                placeholder="Raccontami la tua idea o il tuo progetto..."
+                placeholder={t('messagePlaceholder')}
                 required
                 rows={4}
                 className="w-full px-4 py-3 rounded-xl bg-white/5 border border-white/10 text-white placeholder-white/30 focus:border-violet-500 focus:ring-1 focus:ring-violet-500 focus:outline-none transition-all resize-none"
@@ -116,7 +118,7 @@ export function CTASection() {
               className="w-full py-4 rounded-xl font-semibold bg-linear-to-r from-green-600 to-green-500 text-white flex items-center justify-center gap-2 shadow-lg shadow-green-500/20 hover:shadow-green-500/40 transition-shadow"
             >
               <Send className="w-5 h-5" />
-              Invia su WhatsApp
+              {t('send')}
             </motion.button>
           </form>
         </motion.div>
@@ -129,7 +131,7 @@ export function CTASection() {
           transition={{ duration: 0.6, delay: 0.4 }}
         >
           <p className="text-center text-white/40 text-sm mb-4">
-            Oppure contattami direttamente
+            {t('or')}
           </p>
           <div className="flex flex-wrap justify-center gap-3">
             {contactLinks.map((link) => (

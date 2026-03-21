@@ -2,14 +2,17 @@
 
 import { motion } from 'framer-motion'
 import Link from 'next/link'
-
-const footerLinks = [
-  { label: 'Progetti', href: '#progetti' },
-  { label: 'Chi sono', href: '#chi-sono' },
-  { label: 'Privacy Policy', href: '#' },
-]
+import { useTranslations } from 'next-intl'
 
 export function Footer() {
+  const t = useTranslations('footer')
+
+  const footerLinks = [
+    { label: t('projects'), href: '#progetti' },
+    { label: t('about'), href: '#chi-sono' },
+    { label: t('privacy'), href: '#' },
+  ]
+
   return (
     <footer className="relative py-8 border-t border-white/5">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -21,7 +24,7 @@ export function Footer() {
             viewport={{ once: true }}
             className="text-sm text-white/40"
           >
-            © 2026 Fabio Miceli - Full-Stack Developer · P.IVA 18147041000
+            {t('copyright')}
           </motion.p>
 
           {/* Links */}

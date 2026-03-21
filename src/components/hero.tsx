@@ -4,8 +4,10 @@ import { useEffect, useState, useRef } from 'react'
 import { motion } from 'framer-motion'
 import { ChevronDown } from 'lucide-react'
 import Image from 'next/image'
+import { useTranslations } from 'next-intl'
 
 export function Hero() {
+  const t = useTranslations('hero')
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 })
   const [isMobile, setIsMobile] = useState(true)
   const containerRef = useRef<HTMLDivElement>(null)
@@ -36,14 +38,14 @@ export function Hero() {
   }, [isMobile])
 
   return (
-    <section 
+    <section
       ref={containerRef}
       className="relative min-h-screen flex items-center justify-center overflow-hidden grain"
     >
       {/* Animated gradient background */}
       <div className="absolute inset-0 bg-[#0a0a1a]">
         {/* Base gradient */}
-        <div 
+        <div
           className="absolute inset-0 opacity-60"
           style={{
             background: `
@@ -53,7 +55,7 @@ export function Hero() {
             `
           }}
         />
-        
+
         {/* Aurora effect - desktop only */}
         {!isMobile && (
           <>
@@ -121,7 +123,7 @@ export function Hero() {
         )}
 
         {/* Grid overlay */}
-        <div 
+        <div
           className="absolute inset-0 opacity-[0.02]"
           style={{
             backgroundImage: `
@@ -161,8 +163,8 @@ export function Hero() {
 
           {/* Main headline */}
           <h1 className="font-(family-name:--font-manrope) text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold leading-tight tracking-tight mb-4">
-            <span className="text-white">Il tuo problema è la mia </span>
-            <span className="gradient-text">soluzione.</span>
+            <span className="text-white">{t('headline1')}</span>
+            <span className="gradient-text">{t('headline2')}</span>
           </h1>
 
           {/* Accent line */}
@@ -172,7 +174,7 @@ export function Hero() {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="text-2xl sm:text-3xl md:text-4xl font-bold text-violet-400 mb-6"
           >
-            Velocemente.
+            {t('accent')}
           </motion.p>
 
           {/* Subtitle */}
@@ -182,8 +184,8 @@ export function Hero() {
             transition={{ duration: 0.8, delay: 0.4 }}
             className="text-lg sm:text-xl text-white/60 max-w-2xl mx-auto mb-10 leading-relaxed"
           >
-            Dev + Design + metodologia agile = <br className="sm:hidden" />
-            <span className="text-white/80">Impatto business in tempi da freelance</span>
+            {t('subtitle1')} <br className="sm:hidden" />
+            <span className="text-white/80">{t('subtitle2')}</span>
           </motion.p>
 
           {/* CTA Button */}
@@ -193,11 +195,11 @@ export function Hero() {
             transition={{ duration: 0.8, delay: 0.6 }}
           >
             <MagneticButton>
-              <a 
+              <a
                 href="#chi-sono"
                 className="group relative inline-flex items-center gap-2 px-8 py-4 rounded-full text-lg font-semibold bg-linear-to-r from-violet-600 via-violet-500 to-blue-600 text-white overflow-hidden"
               >
-                <span className="relative z-10">Scopri come lavoro</span>
+                <span className="relative z-10">{t('cta')}</span>
                 <motion.span
                   className="absolute inset-0 bg-linear-to-r from-blue-600 via-violet-500 to-violet-600"
                   initial={{ x: '100%' }}
@@ -217,7 +219,7 @@ export function Hero() {
         transition={{ delay: 1.2, duration: 0.8 }}
         className="absolute bottom-8 left-1/2 -translate-x-1/2 hidden md:flex flex-col items-center gap-2"
       >
-        <span className="text-xs text-white/40 uppercase tracking-widest">Scorri</span>
+        <span className="text-xs text-white/40 uppercase tracking-widest">{t('scroll')}</span>
         <motion.div
           animate={{ y: [0, 8, 0] }}
           transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut' }}

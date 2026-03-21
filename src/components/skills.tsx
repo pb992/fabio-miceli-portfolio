@@ -2,52 +2,54 @@
 
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { 
-  Monitor, 
-  Server, 
-  Palette, 
+import {
+  Monitor,
+  Server,
+  Palette,
   Sparkles,
   ChevronDown,
   ArrowRight
 } from 'lucide-react'
-
-const skillCategories = [
-  {
-    id: 'frontend',
-    title: 'Quello che vedi',
-    icon: Monitor,
-    gradient: 'from-violet-500 to-purple-600',
-    skills: ['React', 'Angular', 'Next.js', 'TypeScript', 'Tailwind CSS'],
-    description: 'Creo le interfacce con cui interagisci: siti, app, dashboard',
-  },
-  {
-    id: 'backend',
-    title: 'Quello che non vedi',
-    icon: Server,
-    gradient: 'from-blue-500 to-cyan-500',
-    skills: ['Python', 'C#', 'Java', 'Flask', 'PHP', 'Node.js'],
-    description: 'La logica dietro le quinte: dati, API, automazioni',
-  },
-  {
-    id: 'cms-design',
-    title: 'Siti & Design',
-    icon: Palette,
-    gradient: 'from-rose-500 to-pink-500',
-    skills: ['WordPress', 'Figma', 'UI/UX', 'Responsive Design'],
-    description: 'Siti pronti all\'uso e design che funziona su qualsiasi schermo',
-  },
-  {
-    id: 'ai-tools',
-    title: 'AI & Automazione',
-    icon: Sparkles,
-    gradient: 'from-amber-500 to-orange-500',
-    skills: ['Claude', 'Cursor', 'Vercel', 'Git'],
-    description: 'Uso l\'intelligenza artificiale per lavorare il doppio in metà tempo',
-  },
-]
+import { useTranslations } from 'next-intl'
 
 export function Skills() {
+  const t = useTranslations('skills')
   const [openId, setOpenId] = useState<string | null>('frontend')
+
+  const skillCategories = [
+    {
+      id: 'frontend',
+      title: t('frontend.title'),
+      icon: Monitor,
+      gradient: 'from-violet-500 to-purple-600',
+      skills: ['React', 'Angular', 'Next.js', 'TypeScript', 'Tailwind CSS'],
+      description: t('frontend.description'),
+    },
+    {
+      id: 'backend',
+      title: t('backend.title'),
+      icon: Server,
+      gradient: 'from-blue-500 to-cyan-500',
+      skills: ['Python', 'C#', 'Java', 'Flask', 'PHP', 'Node.js'],
+      description: t('backend.description'),
+    },
+    {
+      id: 'cms-design',
+      title: t('cms.title'),
+      icon: Palette,
+      gradient: 'from-rose-500 to-pink-500',
+      skills: ['WordPress', 'Figma', 'UI/UX', 'Responsive Design'],
+      description: t('cms.description'),
+    },
+    {
+      id: 'ai-tools',
+      title: t('ai.title'),
+      icon: Sparkles,
+      gradient: 'from-amber-500 to-orange-500',
+      skills: ['Claude', 'Cursor', 'Vercel', 'Git'],
+      description: t('ai.description'),
+    },
+  ]
 
   const toggleCategory = (id: string) => {
     setOpenId(openId === id ? null : id)
@@ -68,13 +70,13 @@ export function Skills() {
           className="text-center mb-16"
         >
           <span className="text-sm font-medium text-violet-400 uppercase tracking-widest mb-4 block">
-            Competenze
+            {t('label')}
           </span>
           <h2 className="font-(family-name:--font-manrope) text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4">
-            Le mie <span className="gradient-text">competenze</span>
+            {t('title1')}<span className="gradient-text">{t('title2')}</span>
           </h2>
           <p className="text-white/50 max-w-xl mx-auto">
-            Un mix di tecnologie moderne per costruire soluzioni complete e scalabili
+            {t('subtitle')}
           </p>
         </motion.div>
 
@@ -163,11 +165,11 @@ export function Skills() {
           transition={{ duration: 0.6, delay: 0.4 }}
           className="text-center mt-12"
         >
-          <a 
+          <a
             href="#progetti"
             className="inline-flex items-center gap-2 px-6 py-3 rounded-full text-sm font-medium bg-white/5 text-white border border-white/10 hover:border-violet-500/50 hover:bg-white/10 transition-all duration-300 group"
           >
-            Vedi i miei progetti
+            {t('cta')}
             <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
           </a>
         </motion.div>
