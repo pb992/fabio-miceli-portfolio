@@ -15,6 +15,7 @@ export interface Project {
   features: string[]
   stack: string[]
   url?: string
+  client?: { name: string; logo: string }
 }
 
 export const projects: Project[] = [
@@ -29,6 +30,7 @@ export const projects: Project[] = [
     features: ['6 temi', 'Budget smart', '1345+ attività reali'],
     stack: ['Next.js', 'React', 'Google Places API'],
     url: 'https://serataperfetta.it',
+    client: { name: 'SerataPerfetta', logo: '/logos/serataperfetta-logo.png' },
   },
   {
     id: 'vibecoded-tools',
@@ -40,6 +42,7 @@ export const projects: Project[] = [
     gradientFrom: 'from-purple-500',
     features: ['Privacy-first', 'Offline', '5+ prodotti'],
     stack: ['Python', 'React', 'Tauri'],
+    client: { name: 'VibeCoded Tools', logo: '/logos/vibecoded-tools-logo.jpeg' },
   },
   {
     id: 'counseling-academy',
@@ -51,6 +54,7 @@ export const projects: Project[] = [
     gradientFrom: 'from-indigo-500',
     features: ['Area studenti', 'Google Calendar', 'Plugin custom'],
     stack: ['WordPress', 'PHP', 'JavaScript'],
+    client: { name: 'DocPozz', logo: '/logos/counseling-academy.logo.png' },
   },
   {
     id: 'frameaboutyou',
@@ -62,6 +66,7 @@ export const projects: Project[] = [
     gradientFrom: 'from-rose-500',
     features: ['Sync real-time', 'Offline-first', 'Desktop + Web'],
     stack: ['React', 'Tauri', 'Flask'],
+    client: { name: 'Arzillibus', logo: '/logos/arzillibus.png' },
   },
   {
     id: 'transcrypt',
@@ -73,6 +78,7 @@ export const projects: Project[] = [
     gradientFrom: 'from-violet-500',
     features: ['100% locale', 'Riconosce speaker', 'Correzione AI'],
     stack: ['Python', 'faster-whisper', 'Tauri'],
+    client: { name: 'VibeCoded Tools', logo: '/logos/vibecoded-tools-logo.jpeg' },
   },
   {
     id: 'convertifacile',
@@ -84,6 +90,7 @@ export const projects: Project[] = [
     gradientFrom: 'from-emerald-500',
     features: ['Drag & drop', '30+ formati', 'Zero cloud'],
     stack: ['Python', 'FastAPI', 'FFmpeg'],
+    client: { name: 'VibeCoded Tools', logo: '/logos/vibecoded-tools-logo.jpeg' },
   },
   {
     id: 'lineart-studio',
@@ -95,6 +102,7 @@ export const projects: Project[] = [
     gradientFrom: 'from-amber-500',
     features: ['Foto → SVG', 'Editor integrato', 'Export vettoriale'],
     stack: ['React', 'FastAPI', 'Potrace'],
+    client: { name: 'VibeCoded Tools', logo: '/logos/vibecoded-tools-logo.jpeg' },
   },
   {
     id: 'slide-maker',
@@ -106,5 +114,6 @@ export const projects: Project[] = [
     gradientFrom: 'from-cyan-500',
     features: ['PPTX + Video', 'Musica di sfondo', 'Stili custom'],
     stack: ['Python', 'python-pptx', 'moviepy'],
+    client: { name: 'VibeCoded Tools', logo: '/logos/vibecoded-tools-logo.jpeg' },
   },
 ]

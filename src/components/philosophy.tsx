@@ -87,7 +87,7 @@ export function Philosophy() {
                 </p>
 
                 {/* Decorative corner */}
-                <div className="absolute bottom-0 right-0 w-24 h-24 bg-linear-to-br from-transparent to-white/[0.02] rounded-tl-full" />
+                <div className="absolute bottom-0 right-0 w-24 h-24 bg-linear-to-br from-transparent to-white/2 rounded-tl-full" />
               </div>
             </motion.div>
           ))}

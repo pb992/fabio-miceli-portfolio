@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion'
 import { ExternalLink, ArrowLeft } from 'lucide-react'
 import Link from 'next/link'
+import Image from 'next/image'
 import { projects } from '@/data/projects'
 
 export default function ProgettiPage() {
@@ -71,6 +72,21 @@ export default function ProgettiPage() {
                       </span>
                     ))}
                   </div>
+
+                  {project.client && (
+                    <div className="flex items-center gap-2 mb-4">
+                      <Image
+                        src={project.client.logo}
+                        alt={project.client.name}
+                        width={18}
+                        height={18}
+                        className="w-[18px] h-[18px] rounded-full object-contain"
+                      />
+                      <span className="text-xs text-white/40">
+                        {project.client.name}
+                      </span>
+                    </div>
+                  )}
 
                   <div className="flex items-center justify-between pt-4 border-t border-white/5">
                     <div className="flex flex-wrap gap-2">

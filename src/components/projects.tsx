@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion'
 import { ArrowRight, ExternalLink } from 'lucide-react'
 import Link from 'next/link'
+import Image from 'next/image'
 import { projects } from '@/data/projects'
 
 const featured = projects.slice(0, 4)
@@ -75,6 +76,21 @@ export function Projects() {
                       </span>
                     ))}
                   </div>
+
+                  {project.client && (
+                    <div className="flex items-center gap-2 mb-4 pb-4 border-b border-white/5">
+                      <Image
+                        src={project.client.logo}
+                        alt={project.client.name}
+                        width={20}
+                        height={20}
+                        className="w-5 h-5 rounded-full object-contain"
+                      />
+                      <span className="text-xs text-white/40">
+                        {project.client.name}
+                      </span>
+                    </div>
+                  )}
 
                   <div className="flex items-center justify-between">
                     <div className="flex flex-wrap gap-2">
