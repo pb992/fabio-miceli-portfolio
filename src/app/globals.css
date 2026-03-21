@@ -35,12 +35,14 @@
 }
 
 * {
-  padding: none;
-  margin: none;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
@@ -51,6 +53,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   transition: background-color 0.3s ease, color 0.3s ease;
+  overflow-x: hidden;
 }
 
 /* Custom scrollbar */
@@ -157,6 +160,13 @@ button, a, [role="button"] {
 .whatsapp-float:hover {
   transform: scale(1.09);
   box-shadow: none;
+}
+
+/* Hero mobile gradient animation */
+@keyframes heroGradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
 
 /* Marquee animation */

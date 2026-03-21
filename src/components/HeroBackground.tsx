@@ -6,11 +6,21 @@ import * as THREE from 'three'
 
 function MobileGradientFallback() {
   return (
-    <div className="absolute inset-0 z-0 opacity-60">
-      <div className="absolute inset-0 bg-linear-to-br from-purple-900/40 via-blue-900/30 to-cyan-900/20 animate-pulse"
-           style={{ animationDuration: '4s' }} />
-      <div className="absolute inset-0 bg-linear-to-tl from-pink-900/10 via-transparent to-indigo-900/20 animate-pulse"
-           style={{ animationDuration: '6s', animationDelay: '1s' }} />
+    <div className="absolute inset-0 z-0">
+      <div
+        className="absolute inset-0 opacity-70"
+        style={{
+          background: 'linear-gradient(135deg, rgba(99,102,241,0.4) 0%, rgba(59,130,246,0.3) 30%, rgba(6,182,212,0.25) 60%, rgba(168,85,247,0.3) 100%)',
+          backgroundSize: '400% 400%',
+          animation: 'heroGradientShift 8s ease infinite',
+        }}
+      />
+      <div
+        className="absolute inset-0 opacity-30"
+        style={{
+          background: 'radial-gradient(ellipse at 50% 50%, rgba(129,140,248,0.5) 0%, transparent 70%)',
+        }}
+      />
     </div>
   )
 }

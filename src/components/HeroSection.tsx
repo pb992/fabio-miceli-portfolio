@@ -61,7 +61,7 @@ export default function HeroSection() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1, delay: 1 }}
-        className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-20"
+        className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-20 hidden sm:block"
       >
         <motion.div
           animate={{ y: [0, 10, 0] }}
