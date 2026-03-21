@@ -48,13 +48,13 @@ export function Collaborations() {
               className="flex items-center shrink-0 px-6 sm:px-10"
             >
               <div className="group relative flex items-center justify-center">
-                <div className="w-20 h-20 rounded-full bg-white border border-white/20 flex items-center justify-center p-2.5 group-hover:border-violet-500/40 group-hover:shadow-lg group-hover:shadow-violet-500/10 transition-all duration-300">
+                <div className="w-24 h-24 rounded-full bg-white border border-white/20 flex items-center justify-center p-3 group-hover:border-violet-500/40 group-hover:shadow-lg group-hover:shadow-violet-500/10 transition-all duration-300 overflow-hidden">
                   <Image
                     src={collab.logo}
                     alt={collab.name}
-                    width={56}
-                    height={56}
-                    className="w-full h-full object-contain rounded-full"
+                    width={72}
+                    height={72}
+                    className="w-full h-full object-contain"
                   />
                 </div>
                 <div className="absolute -bottom-8 left-1/2 -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
