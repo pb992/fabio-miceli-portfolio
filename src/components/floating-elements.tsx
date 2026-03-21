@@ -101,7 +101,7 @@ export function SocialSidebar() {
       ))}
       
       {/* Decorative line */}
-      <div className="w-px h-16 bg-gradient-to-b from-white/20 to-transparent mx-auto mt-2" />
+      <div className="w-px h-16 bg-linear-to-b from-white/20 to-transparent mx-auto mt-2" />
     </motion.div>
   )
 }

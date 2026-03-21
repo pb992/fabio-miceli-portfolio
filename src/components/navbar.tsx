@@ -43,14 +43,14 @@ export function Navbar() {
               className="relative group"
             >
               <motion.span 
-                className="text-2xl font-bold font-[family-name:var(--font-manrope)] tracking-tight"
+                className="text-2xl font-bold font-(family-name:--font-manrope) tracking-tight"
                 whileHover={{ scale: 1.05 }}
                 transition={{ type: 'spring', stiffness: 400, damping: 17 }}
               >
                 <span className="gradient-text">FM</span>
                 <span className="text-white">.</span>
               </motion.span>
-              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-violet-500 to-blue-500 group-hover:w-full transition-all duration-300" />
+              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-linear-to-r from-violet-500 to-blue-500 group-hover:w-full transition-all duration-300" />
             </Link>
 
             {/* Desktop Navigation */}
@@ -62,14 +62,14 @@ export function Navbar() {
                   className="relative group text-sm font-medium text-white/70 hover:text-white transition-colors duration-300"
                 >
                   {link.label}
-                  <span className="absolute -bottom-1 left-0 w-0 h-px bg-gradient-to-r from-violet-500 to-blue-500 group-hover:w-full transition-all duration-300" />
+                  <span className="absolute -bottom-1 left-0 w-0 h-px bg-linear-to-r from-violet-500 to-blue-500 group-hover:w-full transition-all duration-300" />
                 </Link>
               ))}
               <Link href="#contatti">
                 <motion.button
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
-                  className="px-5 py-2.5 rounded-full text-sm font-medium bg-gradient-to-r from-violet-600 to-blue-600 text-white shadow-lg shadow-violet-500/20 hover:shadow-violet-500/40 transition-shadow duration-300"
+                  className="px-5 py-2.5 rounded-full text-sm font-medium bg-linear-to-r from-violet-600 to-blue-600 text-white shadow-lg shadow-violet-500/20 hover:shadow-violet-500/40 transition-shadow duration-300"
                 >
                   Contattami
                 </motion.button>
@@ -121,7 +121,7 @@ export function Navbar() {
                 transition={{ delay: 0.3 }}
               >
                 <Link href="#contatti" onClick={() => setIsMobileMenuOpen(false)}>
-                  <button className="px-8 py-3 rounded-full text-lg font-medium bg-gradient-to-r from-violet-600 to-blue-600 text-white">
+                  <button className="px-8 py-3 rounded-full text-lg font-medium bg-linear-to-r from-violet-600 to-blue-600 text-white">
                     Contattami
                   </button>
                 </Link>

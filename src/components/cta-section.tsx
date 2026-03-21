@@ -62,7 +62,7 @@ export function CTASection() {
           transition={{ duration: 0.6 }}
           className="text-center mb-12"
         >
-          <h2 className="font-[family-name:var(--font-manrope)] text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4 leading-tight text-balance">
+          <h2 className="font-(family-name:--font-manrope) text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4 leading-tight text-balance">
             Non serve essere una grande azienda
             <br />
             <span className="gradient-text">per avere una grande idea.</span>
@@ -113,7 +113,7 @@ export function CTASection() {
               type="submit"
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
-              className="w-full py-4 rounded-xl font-semibold bg-gradient-to-r from-green-600 to-green-500 text-white flex items-center justify-center gap-2 shadow-lg shadow-green-500/20 hover:shadow-green-500/40 transition-shadow"
+              className="w-full py-4 rounded-xl font-semibold bg-linear-to-r from-green-600 to-green-500 text-white flex items-center justify-center gap-2 shadow-lg shadow-green-500/20 hover:shadow-green-500/40 transition-shadow"
             >
               <Send className="w-5 h-5" />
               Invia su WhatsApp

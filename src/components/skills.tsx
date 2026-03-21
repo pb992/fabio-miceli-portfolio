@@ -14,35 +14,35 @@ import {
 const skillCategories = [
   {
     id: 'frontend',
-    title: 'Frontend',
+    title: 'Quello che vedi',
     icon: Monitor,
     gradient: 'from-violet-500 to-purple-600',
     skills: ['React', 'Angular', 'Next.js', 'TypeScript', 'Tailwind CSS'],
-    description: 'Interfacce moderne, reattive e performanti',
+    description: 'Creo le interfacce con cui interagisci: siti, app, dashboard',
   },
   {
     id: 'backend',
-    title: 'Backend',
+    title: 'Quello che non vedi',
     icon: Server,
     gradient: 'from-blue-500 to-cyan-500',
     skills: ['Python', 'C#', 'Java', 'Flask', 'PHP', 'Node.js'],
-    description: 'Architetture robuste e scalabili',
+    description: 'La logica dietro le quinte: dati, API, automazioni',
   },
   {
     id: 'cms-design',
-    title: 'CMS & Design',
+    title: 'Siti & Design',
     icon: Palette,
     gradient: 'from-rose-500 to-pink-500',
     skills: ['WordPress', 'Figma', 'UI/UX', 'Responsive Design'],
-    description: 'Design centrato sull\'utente',
+    description: 'Siti pronti all\'uso e design che funziona su qualsiasi schermo',
   },
   {
     id: 'ai-tools',
-    title: 'AI & Tools',
+    title: 'AI & Automazione',
     icon: Sparkles,
     gradient: 'from-amber-500 to-orange-500',
     skills: ['Claude', 'Cursor', 'Vercel', 'Git'],
-    description: 'Strumenti all\'avanguardia',
+    description: 'Uso l\'intelligenza artificiale per lavorare il doppio in metà tempo',
   },
 ]
 
@@ -70,7 +70,7 @@ export function Skills() {
           <span className="text-sm font-medium text-violet-400 uppercase tracking-widest mb-4 block">
             Competenze
           </span>
-          <h2 className="font-[family-name:var(--font-manrope)] text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4">
+          <h2 className="font-(family-name:--font-manrope) text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4">
             Le mie <span className="gradient-text">competenze</span>
           </h2>
           <p className="text-white/50 max-w-xl mx-auto">
@@ -99,7 +99,7 @@ export function Skills() {
                   className="w-full p-6 flex items-center gap-4 group"
                 >
                   {/* Icon */}
-                  <div className={`w-12 h-12 rounded-xl bg-gradient-to-br ${category.gradient} flex items-center justify-center shrink-0`}>
+                  <div className={`w-12 h-12 rounded-xl bg-linear-to-br ${category.gradient} flex items-center justify-center shrink-0`}>
                     <category.icon className="w-6 h-6 text-white" />
                   </div>
 

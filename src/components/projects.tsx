@@ -1,59 +1,108 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { 
-  GraduationCap, 
-  Camera, 
-  FileText, 
+import {
+  GraduationCap,
+  Camera,
+  FileText,
   Mic,
+  PartyPopper,
+  Rocket,
+  Paintbrush,
+  Presentation,
   ArrowRight,
   ExternalLink
 } from 'lucide-react'
 
 const projects = [
   {
+    id: 'serata-perfetta',
+    title: 'SerataPerfetta.it',
+    tagline: 'Generatore intelligente di serate',
+    description: 'Scegli budget e tema, e l\'app ti genera un programma serale completo con ristoranti, cinema, eventi e attività — tutto con dati reali e mappe.',
+    icon: PartyPopper,
+    accentColor: 'bg-fuchsia-500',
+    gradientFrom: 'from-fuchsia-500',
+    features: ['6 temi', 'Budget smart', '1345+ attività reali'],
+    stack: ['Next.js', 'React', 'Google Places API'],
+    url: 'https://serataperfetta.it',
+  },
+  {
+    id: 'vibecoded-tools',
+    title: 'VibeCoded Tools',
+    tagline: 'Agenzia software AI-first',
+    description: 'Suite di tool desktop che funzionano offline: trascrizioni, conversioni file, presentazioni automatiche e grafica vettoriale. Tutto locale, senza cloud.',
+    icon: Rocket,
+    accentColor: 'bg-purple-500',
+    gradientFrom: 'from-purple-500',
+    features: ['Privacy-first', 'Offline', '5+ prodotti'],
+    stack: ['Python', 'React', 'Tauri'],
+  },
+  {
     id: 'counseling-academy',
     title: 'Counseling Academy',
-    tagline: 'Piattaforma formativa completa',
-    description: 'Sito WordPress per scuola di counseling con area corsi, gestione studenti e pagamenti integrati.',
+    tagline: 'Piattaforma per scuola di counseling',
+    description: 'Sito completo con gestione studenti, corsi a livelli, materiali didattici e calendario eventi integrato con Google Calendar.',
     icon: GraduationCap,
     accentColor: 'bg-indigo-500',
     gradientFrom: 'from-indigo-500',
-    features: ['E-learning', 'Pagamenti online', 'Area riservata'],
-    stack: ['WordPress', 'PHP', 'WooCommerce'],
+    features: ['Area studenti', 'Google Calendar', 'Plugin custom'],
+    stack: ['WordPress', 'PHP', 'JavaScript'],
   },
   {
     id: 'frameaboutyou',
     title: 'FrameAboutYou',
-    tagline: 'App multi-piattaforma per eventi',
-    description: 'Applicazione per gestione foto eventi. Versione web per ospiti e desktop Tauri per i fotografi.',
+    tagline: 'App fotografica per eventi',
+    description: 'I fotografi gestiscono le foto in tempo reale, gli ospiti le vedono subito sul tablet. Funziona anche senza internet.',
     icon: Camera,
     accentColor: 'bg-rose-500',
     gradientFrom: 'from-rose-500',
-    features: ['Gallery condivise', 'QR Code', 'Desktop app'],
-    stack: ['React', 'Tauri', 'Node.js'],
-  },
-  {
-    id: 'convertifacile',
-    title: 'ConvertiFacile',
-    tagline: 'Convertitore universale',
-    description: 'Tool desktop per conversione file: immagini, documenti, audio. Semplice, veloce, offline.',
-    icon: FileText,
-    accentColor: 'bg-emerald-500',
-    gradientFrom: 'from-emerald-500',
-    features: ['Offline', 'Multi-formato', 'Batch processing'],
-    stack: ['Electron', 'TypeScript', 'Sharp'],
+    features: ['Sync real-time', 'Offline-first', 'Desktop + Web'],
+    stack: ['React', 'Tauri', 'Flask'],
   },
   {
     id: 'transcrypt',
     title: 'Transcrypt',
-    tagline: 'Trascrizione AI-powered',
-    description: 'Strumento per trascrizione audio automatica con AI. Supporto multilingua e export in vari formati.',
+    tagline: 'Trascrizione audio con AI',
+    description: 'Registri una riunione o un\'intervista, e l\'app la trascrive automaticamente sul tuo PC. Riconosce chi parla e corregge gli errori con AI.',
     icon: Mic,
     accentColor: 'bg-violet-500',
     gradientFrom: 'from-violet-500',
-    features: ['AI Transcription', 'Multi-lingua', 'Export PDF'],
-    stack: ['Python', 'Whisper', 'Flask'],
+    features: ['100% locale', 'Riconosce speaker', 'Correzione AI'],
+    stack: ['Python', 'faster-whisper', 'Tauri'],
+  },
+  {
+    id: 'convertifacile',
+    title: 'ConvertiFacile',
+    tagline: 'Convertitore file universale',
+    description: 'Trascina un file e lo converte in qualsiasi formato: foto, PDF, audio, video. Tutto sul tuo PC, senza caricare nulla online.',
+    icon: FileText,
+    accentColor: 'bg-emerald-500',
+    gradientFrom: 'from-emerald-500',
+    features: ['Drag & drop', '30+ formati', 'Zero cloud'],
+    stack: ['Python', 'FastAPI', 'FFmpeg'],
+  },
+  {
+    id: 'lineart-studio',
+    title: 'LineArt Studio',
+    tagline: 'Da foto a disegno vettoriale',
+    description: 'Carica una foto e la trasforma in un\'illustrazione vettoriale SVG stile line art. Perfetto per loghi, stampe e grafiche.',
+    icon: Paintbrush,
+    accentColor: 'bg-amber-500',
+    gradientFrom: 'from-amber-500',
+    features: ['Foto → SVG', 'Editor integrato', 'Export vettoriale'],
+    stack: ['React', 'FastAPI', 'Potrace'],
+  },
+  {
+    id: 'slide-maker',
+    title: 'SlideMaker',
+    tagline: 'Presentazioni da foto in un click',
+    description: 'Dai una cartella di foto e crea automaticamente presentazioni PPTX o video MP4 con transizioni, musica e stili personalizzabili.',
+    icon: Presentation,
+    accentColor: 'bg-cyan-500',
+    gradientFrom: 'from-cyan-500',
+    features: ['PPTX + Video', 'Musica di sfondo', 'Stili custom'],
+    stack: ['Python', 'python-pptx', 'moviepy'],
   },
 ]
 
@@ -75,7 +124,7 @@ export function Projects() {
           <span className="text-sm font-medium text-violet-400 uppercase tracking-widest mb-4 block">
             Portfolio
           </span>
-          <h2 className="font-[family-name:var(--font-manrope)] text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4">
+          <h2 className="font-(family-name:--font-manrope) text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4">
             Progetti in <span className="gradient-text">movimento</span>
           </h2>
           <p className="text-white/50 max-w-xl mx-auto">
@@ -84,7 +133,7 @@ export function Projects() {
         </motion.div>
 
         {/* Projects bento grid */}
-        <div className="grid md:grid-cols-2 gap-6">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {projects.map((project, index) => (
             <motion.div
               key={project.id}
@@ -105,7 +154,7 @@ export function Projects() {
                     <motion.div
                       whileHover={{ scale: 1.1, rotate: -5 }}
                       transition={{ type: 'spring', stiffness: 400, damping: 17 }}
-                      className={`w-12 h-12 rounded-xl bg-gradient-to-br ${project.gradientFrom} to-transparent/50 flex items-center justify-center shrink-0`}
+                      className={`w-12 h-12 rounded-xl bg-linear-to-br ${project.gradientFrom} to-transparent/50 flex items-center justify-center shrink-0`}
                     >
                       <project.icon className="w-6 h-6 text-white" />
                     </motion.div>
@@ -157,7 +206,7 @@ export function Projects() {
 
                 {/* Hover gradient overlay */}
                 <div 
-                  className={`absolute inset-0 bg-gradient-to-br ${project.gradientFrom} to-transparent opacity-0 group-hover:opacity-5 transition-opacity duration-500 pointer-events-none`}
+                  className={`absolute inset-0 bg-linear-to-br ${project.gradientFrom} to-transparent opacity-0 group-hover:opacity-5 transition-opacity duration-500 pointer-events-none`}
                 />
               </div>
             </motion.div>

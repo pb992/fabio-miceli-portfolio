@@ -140,7 +140,7 @@ export function Hero() {
           transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
         >
           {/* Main headline */}
-          <h1 className="font-[family-name:var(--font-manrope)] text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold leading-tight tracking-tight mb-4">
+          <h1 className="font-(family-name:--font-manrope) text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold leading-tight tracking-tight mb-4">
             <span className="text-white">Il tuo problema è la mia </span>
             <span className="gradient-text">soluzione.</span>
           </h1>
@@ -175,11 +175,11 @@ export function Hero() {
             <MagneticButton>
               <a 
                 href="#chi-sono"
-                className="group relative inline-flex items-center gap-2 px-8 py-4 rounded-full text-lg font-semibold bg-gradient-to-r from-violet-600 via-violet-500 to-blue-600 text-white overflow-hidden"
+                className="group relative inline-flex items-center gap-2 px-8 py-4 rounded-full text-lg font-semibold bg-linear-to-r from-violet-600 via-violet-500 to-blue-600 text-white overflow-hidden"
               >
                 <span className="relative z-10">Scopri come lavoro</span>
                 <motion.span
-                  className="absolute inset-0 bg-gradient-to-r from-blue-600 via-violet-500 to-violet-600"
+                  className="absolute inset-0 bg-linear-to-r from-blue-600 via-violet-500 to-violet-600"
                   initial={{ x: '100%' }}
                   whileHover={{ x: '0%' }}
                   transition={{ duration: 0.3 }}

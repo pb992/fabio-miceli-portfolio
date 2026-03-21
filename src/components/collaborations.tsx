@@ -36,7 +36,7 @@ export function Collaborations() {
       {/* Marquee container */}
       <div className="relative overflow-hidden">
         {/* Gradient fades */}
-        <div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-[#0a0a1a] to-transparent z-10" />
+        <div className="absolute left-0 top-0 bottom-0 w-32 bg-linear-to-r from-[#0a0a1a] to-transparent z-10" />
         <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-[#0a0a1a] to-transparent z-10" />
 
         {/* Scrolling content */}
@@ -46,7 +46,7 @@ export function Collaborations() {
               key={`${name}-${index}`}
               className="flex items-center shrink-0 px-8 sm:px-12"
             >
-              <span className="text-xl sm:text-2xl font-bold text-white/20 hover:text-white/40 transition-colors duration-300 whitespace-nowrap font-[family-name:var(--font-manrope)]">
+              <span className="text-xl sm:text-2xl font-bold text-white/20 hover:text-white/40 transition-colors duration-300 whitespace-nowrap font-(family-name:--font-manrope)">
                 {name}
               </span>
             </div>

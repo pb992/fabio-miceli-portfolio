@@ -42,7 +42,7 @@ export function Philosophy() {
           <span className="text-sm font-medium text-violet-400 uppercase tracking-widest mb-4 block">
             Filosofia
           </span>
-          <h2 className="font-[family-name:var(--font-manrope)] text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-6">
+          <h2 className="font-(family-name:--font-manrope) text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-6">
             Non vendo codice.<br />
             <span className="gradient-text">Vendo velocità e impatto.</span>
           </h2>
@@ -66,14 +66,14 @@ export function Philosophy() {
               <div className="h-full glass rounded-2xl p-8 relative overflow-hidden transition-all duration-500 hover:glow-violet card-3d">
                 {/* Gradient background on hover */}
                 <div 
-                  className={`absolute inset-0 bg-gradient-to-br ${pillar.gradient} opacity-0 group-hover:opacity-5 transition-opacity duration-500`}
+                  className={`absolute inset-0 bg-linear-to-br ${pillar.gradient} opacity-0 group-hover:opacity-5 transition-opacity duration-500`}
                 />
 
                 {/* Icon */}
                 <motion.div
                   whileHover={{ scale: 1.1, rotate: 5 }}
                   transition={{ type: 'spring', stiffness: 400, damping: 17 }}
-                  className={`w-14 h-14 rounded-xl bg-gradient-to-br ${pillar.gradient} flex items-center justify-center mb-6 shadow-lg`}
+                  className={`w-14 h-14 rounded-xl bg-linear-to-br ${pillar.gradient} flex items-center justify-center mb-6 shadow-lg`}
                 >
                   <pillar.icon className="w-7 h-7 text-white" />
                 </motion.div>
@@ -87,7 +87,7 @@ export function Philosophy() {
                 </p>
 
                 {/* Decorative corner */}
-                <div className="absolute bottom-0 right-0 w-24 h-24 bg-gradient-to-br from-transparent to-white/[0.02] rounded-tl-full" />
+                <div className="absolute bottom-0 right-0 w-24 h-24 bg-linear-to-br from-transparent to-white/[0.02] rounded-tl-full" />
               </div>
             </motion.div>
           ))}
