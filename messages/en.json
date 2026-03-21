@@ -1,0 +1,147 @@
+{
+  "nav": {
+    "skills": "Skills",
+    "projects": "Projects",
+    "about": "About",
+    "contact": "Get in touch"
+  },
+  "hero": {
+    "headline1": "Your problem is my ",
+    "headline2": "solution.",
+    "accent": "Fast.",
+    "subtitle1": "Dev + Design + agile methodology = ",
+    "subtitle2": "Business impact at freelance speed",
+    "cta": "See how I work",
+    "scroll": "Scroll"
+  },
+  "skills": {
+    "label": "Skills",
+    "title1": "My ",
+    "title2": "skills",
+    "subtitle": "A modern tech mix to build complete, scalable solutions",
+    "cta": "See my projects",
+    "frontend": {
+      "title": "What you see",
+      "description": "I build the interfaces you interact with: websites, apps, dashboards"
+    },
+    "backend": {
+      "title": "What you don't see",
+      "description": "The logic behind the scenes: data, APIs, automation"
+    },
+    "cms": {
+      "title": "Websites & Design",
+      "description": "Ready-to-use websites and design that works on any screen"
+    },
+    "ai": {
+      "title": "AI & Automation",
+      "description": "I use artificial intelligence to do twice the work in half the time"
+    }
+  },
+  "philosophy": {
+    "label": "Philosophy",
+    "title1": "I don't sell code. ",
+    "title2": "I sell speed and impact.",
+    "subtitle": "A hybrid approach that combines the depth of an agency with the speed of a freelancer. I work with you, not for you.",
+    "strategy": {
+      "title": "Strategy",
+      "description": "Every project starts with deep analysis. I understand your goals before writing a single line of code."
+    },
+    "execution": {
+      "title": "Execution",
+      "description": "Fast development with quality. No bureaucracy, just concrete results with clear timelines."
+    },
+    "results": {
+      "title": "Results",
+      "description": "Code is just the means. What matters is the impact on your business and your users."
+    }
+  },
+  "about": {
+    "label": "About",
+    "title1": "Developer, musician, ",
+    "title2": "athlete",
+    "bioTitle": "My story",
+    "bio1": "I'm Fabio. I write code by day and play piano, drums and guitar when I unplug. Over 4 years I've worked with different stacks, teams and industries.",
+    "bio2": "I'm naturally curious: every project is a new opportunity to learn something, and I love a good challenge. Versatility is my strength.",
+    "stat1value": "4+",
+    "stat1label": "Years of experience",
+    "stat2value": "100%",
+    "stat2label": "Satisfied clients",
+    "music": {
+      "title": "Music",
+      "description": "Piano, drums, guitar - three instruments to unplug from code and recharge creativity."
+    },
+    "calisthenics": {
+      "title": "Calisthenics",
+      "description": "Balance in everything, even upside down. Body discipline reflects in code discipline."
+    },
+    "nomad": {
+      "title": "Digital nomad",
+      "description": "Kayaking on lakes, concerts, travel. I work wherever there's a Wi-Fi connection."
+    },
+    "workTitle": "How I work",
+    "workDescription": "Freelancer with an agile team: zero bureaucracy, direct communication, concrete results. I like working from wherever I want, managing my own time, and putting energy into what I love outside the screen too."
+  },
+  "projects": {
+    "label": "Portfolio",
+    "title1": "Projects in ",
+    "title2": "motion",
+    "subtitle": "Real solutions for real problems. Every project is a story of collaboration and results.",
+    "cta": "All projects",
+    "allTitle1": "All ",
+    "allTitle2": "projects",
+    "allSubtitle": "Every project is a concrete solution to a real problem",
+    "backHome": "Back to home",
+    "serataPerfetta": {
+      "tagline": "Smart evening planner",
+      "description": "Pick a budget and theme, and the app generates a complete evening plan with restaurants, cinemas, events and activities - all with real data and maps."
+    },
+    "vibecodedTools": {
+      "tagline": "AI-first software agency",
+      "description": "A suite of desktop tools that work offline: transcriptions, file conversions, automatic presentations and vector graphics. All local, no cloud."
+    },
+    "counselingAcademy": {
+      "tagline": "Counseling school platform",
+      "description": "Full website with student management, leveled courses, teaching materials and event calendar integrated with Google Calendar."
+    },
+    "frameAboutYou": {
+      "tagline": "Photo app for events",
+      "description": "Photographers manage photos in real time, guests see them instantly on tablets. Works even without internet."
+    },
+    "transcrypt": {
+      "tagline": "AI audio transcription",
+      "description": "Record a meeting or interview, and the app transcribes it automatically on your PC. Identifies speakers and corrects errors with AI."
+    },
+    "convertiFacile": {
+      "tagline": "Universal file converter",
+      "description": "Drag a file and convert it to any format: photos, PDFs, audio, video. All on your PC, no uploading anywhere."
+    },
+    "lineArtStudio": {
+      "tagline": "Photo to vector drawing",
+      "description": "Upload a photo and transform it into an SVG line art illustration. Perfect for logos, prints and graphics."
+    },
+    "slideMaker": {
+      "tagline": "Presentations from photos in one click",
+      "description": "Give it a folder of photos and it automatically creates PPTX presentations or MP4 videos with transitions, music and customizable styles."
+    }
+  },
+  "collaborations": {
+    "label": "Collaborations"
+  },
+  "cta": {
+    "title1": "Have a project in mind?",
+    "title2": "Let's talk.",
+    "subtitle": "Tell me about your idea. No commitment, no formalities - just a conversation to figure out how I can help.",
+    "nameLabel": "Name",
+    "namePlaceholder": "Your name",
+    "messageLabel": "Message",
+    "messagePlaceholder": "Tell me about your project...",
+    "send": "Message me on WhatsApp",
+    "or": "Or email me at:"
+  },
+  "footer": {
+    "copyright": "© 2026 Fabio Miceli - Full-Stack Developer · P.IVA 18147041000",
+    "projects": "Projects",
+    "about": "About",
+    "privacy": "Privacy Policy"
+  }
+}

@@ -1,0 +1,147 @@
+{
+  "nav": {
+    "skills": "Skills",
+    "projects": "Progetti",
+    "about": "Chi sono",
+    "contact": "Contattami"
+  },
+  "hero": {
+    "headline1": "Il tuo problema è la mia ",
+    "headline2": "soluzione.",
+    "accent": "Velocemente.",
+    "subtitle1": "Dev + Design + metodologia agile = ",
+    "subtitle2": "Impatto business in tempi da freelance",
+    "cta": "Scopri come lavoro",
+    "scroll": "Scorri"
+  },
+  "skills": {
+    "label": "Competenze",
+    "title1": "Le mie ",
+    "title2": "competenze",
+    "subtitle": "Un mix di tecnologie moderne per costruire soluzioni complete e scalabili",
+    "cta": "Vedi i miei progetti",
+    "frontend": {
+      "title": "Quello che vedi",
+      "description": "Creo le interfacce con cui interagisci: siti, app, dashboard"
+    },
+    "backend": {
+      "title": "Quello che non vedi",
+      "description": "La logica dietro le quinte: dati, API, automazioni"
+    },
+    "cms": {
+      "title": "Siti & Design",
+      "description": "Siti pronti all'uso e design che funziona su qualsiasi schermo"
+    },
+    "ai": {
+      "title": "AI & Automazione",
+      "description": "Uso l'intelligenza artificiale per lavorare il doppio in metà tempo"
+    }
+  },
+  "philosophy": {
+    "label": "Filosofia",
+    "title1": "Non vendo codice. ",
+    "title2": "Vendo velocità e impatto.",
+    "subtitle": "Un approccio ibrido che unisce la profondità di un'agenzia alla velocità di un freelance. Lavoro con te, non per te.",
+    "strategy": {
+      "title": "Strategia",
+      "description": "Ogni progetto parte da un'analisi approfondita. Capisco i tuoi obiettivi prima di scrivere una riga di codice."
+    },
+    "execution": {
+      "title": "Esecuzione",
+      "description": "Sviluppo rapido con qualità. Niente burocrazia, solo risultati concreti con tempi chiari."
+    },
+    "results": {
+      "title": "Risultati",
+      "description": "Il codice è solo il mezzo. Quello che conta è l'impatto sul tuo business e sui tuoi utenti."
+    }
+  },
+  "about": {
+    "label": "Chi sono",
+    "title1": "Sviluppatore, musicista, ",
+    "title2": "atleta",
+    "bioTitle": "La mia storia",
+    "bio1": "Mi chiamo Fabio. Scrivo codice di giorno e suono piano, batteria e chitarra quando stacco. In 4 anni ho lavorato con stack, team e settori diversi.",
+    "bio2": "Sono curioso per natura: ogni progetto è una nuova opportunità per imparare qualcosa, e a me le sfide piacciono. La versatilità è il mio punto di forza.",
+    "stat1value": "4+",
+    "stat1label": "Anni di esperienza",
+    "stat2value": "100%",
+    "stat2label": "Clienti soddisfatti",
+    "music": {
+      "title": "Musica",
+      "description": "Piano, batteria, chitarra - tre strumenti per staccare dal codice e ricaricare la creatività."
+    },
+    "calisthenics": {
+      "title": "Calisthenics",
+      "description": "Equilibrio in tutto, anche a testa in giù. La disciplina nel corpo si riflette nel codice."
+    },
+    "nomad": {
+      "title": "Nomade digitale",
+      "description": "Kayak sui laghi, concerti, viaggi. Lavoro ovunque ci sia una connessione Wi-Fi."
+    },
+    "workTitle": "Come lavoro",
+    "workDescription": "Freelancer con un team agile: zero burocrazia, comunicazione diretta, risultati concreti. Mi piace lavorare da dove voglio, organizzarmi i tempi e dedicare energia anche a quello che amo fuori dallo schermo."
+  },
+  "projects": {
+    "label": "Portfolio",
+    "title1": "Progetti in ",
+    "title2": "movimento",
+    "subtitle": "Soluzioni reali per problemi reali. Ogni progetto è una storia di collaborazione e risultati.",
+    "cta": "Tutti i progetti",
+    "allTitle1": "Tutti i ",
+    "allTitle2": "progetti",
+    "allSubtitle": "Ogni progetto è una soluzione concreta a un problema reale",
+    "backHome": "Torna alla home",
+    "serataPerfetta": {
+      "tagline": "Generatore intelligente di serate",
+      "description": "Scegli budget e tema, e l'app ti genera un programma serale completo con ristoranti, cinema, eventi e attività - tutto con dati reali e mappe."
+    },
+    "vibecodedTools": {
+      "tagline": "Agenzia software AI-first",
+      "description": "Suite di tool desktop che funzionano offline: trascrizioni, conversioni file, presentazioni automatiche e grafica vettoriale. Tutto locale, senza cloud."
+    },
+    "counselingAcademy": {
+      "tagline": "Piattaforma per scuola di counseling",
+      "description": "Sito completo con gestione studenti, corsi a livelli, materiali didattici e calendario eventi integrato con Google Calendar."
+    },
+    "frameAboutYou": {
+      "tagline": "App fotografica per eventi",
+      "description": "I fotografi gestiscono le foto in tempo reale, gli ospiti le vedono subito sul tablet. Funziona anche senza internet."
+    },
+    "transcrypt": {
+      "tagline": "Trascrizione audio con AI",
+      "description": "Registri una riunione o un'intervista, e l'app la trascrive automaticamente sul tuo PC. Riconosce chi parla e corregge gli errori con AI."
+    },
+    "convertiFacile": {
+      "tagline": "Convertitore file universale",
+      "description": "Trascina un file e lo converte in qualsiasi formato: foto, PDF, audio, video. Tutto sul tuo PC, senza caricare nulla online."
+    },
+    "lineArtStudio": {
+      "tagline": "Da foto a disegno vettoriale",
+      "description": "Carica una foto e la trasforma in un'illustrazione vettoriale SVG stile line art. Perfetto per loghi, stampe e grafiche."
+    },
+    "slideMaker": {
+      "tagline": "Presentazioni da foto in un click",
+      "description": "Dai una cartella di foto e crea automaticamente presentazioni PPTX o video MP4 con transizioni, musica e stili personalizzabili."
+    }
+  },
+  "collaborations": {
+    "label": "Collaborazioni"
+  },
+  "cta": {
+    "title1": "Hai un progetto in mente?",
+    "title2": "Parliamone.",
+    "subtitle": "Raccontami la tua idea. Nessun impegno, nessuna formalità - solo una conversazione per capire come posso aiutarti.",
+    "nameLabel": "Nome",
+    "namePlaceholder": "Il tuo nome",
+    "messageLabel": "Messaggio",
+    "messagePlaceholder": "Raccontami il tuo progetto...",
+    "send": "Scrivimi su WhatsApp",
+    "or": "Oppure scrivimi a:"
+  },
+  "footer": {
+    "copyright": "© 2026 Fabio Miceli - Full-Stack Developer · P.IVA 18147041000",
+    "projects": "Progetti",
+    "about": "Chi sono",
+    "privacy": "Privacy Policy"
+  }
+}
