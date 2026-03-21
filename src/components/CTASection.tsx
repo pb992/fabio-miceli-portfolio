@@ -57,7 +57,7 @@ export default function CTASection() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
           viewport={{ once: true, amount: 0.15 }}
-          className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 mb-8"
+          className="bg-white/10 backdrop-blur-sm rounded-2xl p-4 sm:p-6 md:p-8 mb-8"
         >
           <form onSubmit={handleSubmit} className="space-y-6">
             <div className="text-center">

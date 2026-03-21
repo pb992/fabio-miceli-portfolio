@@ -7,9 +7,9 @@ import * as THREE from 'three'
 function MobileGradientFallback() {
   return (
     <div className="absolute inset-0 z-0 opacity-60">
-      <div className="absolute inset-0 bg-gradient-to-br from-purple-900/40 via-blue-900/30 to-cyan-900/20 animate-pulse"
+      <div className="absolute inset-0 bg-linear-to-br from-purple-900/40 via-blue-900/30 to-cyan-900/20 animate-pulse"
            style={{ animationDuration: '4s' }} />
-      <div className="absolute inset-0 bg-gradient-to-tl from-pink-900/10 via-transparent to-indigo-900/20 animate-pulse"
+      <div className="absolute inset-0 bg-linear-to-tl from-pink-900/10 via-transparent to-indigo-900/20 animate-pulse"
            style={{ animationDuration: '6s', animationDelay: '1s' }} />
     </div>
   )

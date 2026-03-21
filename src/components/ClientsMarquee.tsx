@@ -18,7 +18,7 @@ const doubled = [...clients, ...clients]
 
 export default function ClientsMarquee() {
   return (
-    <section className="py-20 px-4 bg-neutral-50 dark:bg-[var(--surface)] overflow-hidden">
+    <section className="py-20 px-4 sm:px-6 lg:px-8 bg-neutral-50 dark:bg-(--surface) overflow-hidden">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -26,7 +26,7 @@ export default function ClientsMarquee() {
         viewport={{ once: true, amount: 0.15 }}
         className="text-center mb-12"
       >
-        <h2 className="text-3xl sm:text-4xl md:text-5xl font-display font-bold text-neutral-800 dark:text-[var(--foreground)] mb-4">
+        <h2 className="text-3xl sm:text-4xl md:text-5xl font-display font-bold text-neutral-800 dark:text-foreground mb-4">
           <span className="text-gradient">Collaborazioni</span>
         </h2>
         <p className="text-lg text-neutral-600 dark:text-neutral-400">
@@ -37,7 +37,7 @@ export default function ClientsMarquee() {
       <div className="max-w-4xl mx-auto">
         <div className="relative overflow-hidden">
           <motion.div
-            className="flex gap-16 items-center"
+            className="flex gap-8 sm:gap-16 items-center"
             animate={{
               x: [0, -(clients.length * 160)]
             }}
