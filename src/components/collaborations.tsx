@@ -1,22 +1,23 @@
 'use client'
 
 import { motion } from 'framer-motion'
+import Image from 'next/image'
 
 const collaborators = [
-  'Pro Advice Solutions',
-  'TXT E-TECH',
-  'Gesca S.r.l',
-  'Contrader',
-  'DocPozz Counseling Academy',
+  { name: 'Pro Advice Solutions', logo: '/logos/proadvice-logo.png' },
+  { name: 'TXT E-TECH', logo: '/logos/txt-logo.png' },
+  { name: 'Gesca S.r.l', logo: '/logos/gesca-logo.png' },
+  { name: 'Contrader', logo: '/logos/contrader-logo.jpg' },
+  { name: 'DocPozz Counseling Academy', logo: '/logos/counseling-academy.logo.png' },
+  { name: 'Coisystem', logo: '/logos/coisystem.png' },
+  { name: 'Arzillibus', logo: '/logos/arzillibus.png' },
 ]
 
 export function Collaborations() {
-  // Double the array for infinite scroll
   const doubledCollaborators = [...collaborators, ...collaborators]
 
   return (
     <section className="relative py-20">
-      {/* Section divider */}
       <div className="absolute top-0 left-0 right-0 h-px divider-glow" />
 
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 mb-12">
@@ -33,22 +34,32 @@ export function Collaborations() {
         </motion.div>
       </div>
 
-      {/* Marquee container */}
       <div className="relative overflow-hidden">
-        {/* Gradient fades */}
         <div className="absolute left-0 top-0 bottom-0 w-32 bg-linear-to-r from-[#0a0a1a] to-transparent z-10" />
-        <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-[#0a0a1a] to-transparent z-10" />
+        <div className="absolute right-0 top-0 bottom-0 w-32 bg-linear-to-l from-[#0a0a1a] to-transparent z-10" />
 
-        {/* Scrolling content */}
         <div className="flex animate-marquee">
-          {doubledCollaborators.map((name, index) => (
+          {doubledCollaborators.map((collab, index) => (
             <div
-              key={`${name}-${index}`}
+              key={`${collab.name}-${index}`}
               className="flex items-center shrink-0 px-8 sm:px-12"
             >
-              <span className="text-xl sm:text-2xl font-bold text-white/20 hover:text-white/40 transition-colors duration-300 whitespace-nowrap font-(family-name:--font-manrope)">
-                {name}
-              </span>
+              <div className="group relative flex items-center justify-center">
+                <div className="w-20 h-20 rounded-full bg-white/5 border border-white/10 flex items-center justify-center p-3 group-hover:border-violet-500/30 group-hover:bg-white/10 transition-all duration-300">
+                  <Image
+                    src={collab.logo}
+                    alt={collab.name}
+                    width={56}
+                    height={56}
+                    className="w-full h-full object-contain rounded-full opacity-60 group-hover:opacity-100 transition-opacity duration-300"
+                  />
+                </div>
+                <div className="absolute -bottom-8 left-1/2 -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
+                  <span className="text-xs text-white/60 whitespace-nowrap bg-white/5 backdrop-blur-sm px-2 py-1 rounded">
+                    {collab.name}
+                  </span>
+                </div>
+              </div>
             </div>
           ))}
         </div>

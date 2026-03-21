@@ -1,119 +1,18 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import {
-  GraduationCap,
-  Camera,
-  FileText,
-  Mic,
-  PartyPopper,
-  Rocket,
-  Paintbrush,
-  Presentation,
-  ArrowRight,
-  ExternalLink
-} from 'lucide-react'
+import { ArrowRight, ExternalLink } from 'lucide-react'
+import Link from 'next/link'
+import { projects } from '@/data/projects'
 
-const projects = [
-  {
-    id: 'serata-perfetta',
-    title: 'SerataPerfetta.it',
-    tagline: 'Generatore intelligente di serate',
-    description: 'Scegli budget e tema, e l\'app ti genera un programma serale completo con ristoranti, cinema, eventi e attività — tutto con dati reali e mappe.',
-    icon: PartyPopper,
-    accentColor: 'bg-fuchsia-500',
-    gradientFrom: 'from-fuchsia-500',
-    features: ['6 temi', 'Budget smart', '1345+ attività reali'],
-    stack: ['Next.js', 'React', 'Google Places API'],
-    url: 'https://serataperfetta.it',
-  },
-  {
-    id: 'vibecoded-tools',
-    title: 'VibeCoded Tools',
-    tagline: 'Agenzia software AI-first',
-    description: 'Suite di tool desktop che funzionano offline: trascrizioni, conversioni file, presentazioni automatiche e grafica vettoriale. Tutto locale, senza cloud.',
-    icon: Rocket,
-    accentColor: 'bg-purple-500',
-    gradientFrom: 'from-purple-500',
-    features: ['Privacy-first', 'Offline', '5+ prodotti'],
-    stack: ['Python', 'React', 'Tauri'],
-  },
-  {
-    id: 'counseling-academy',
-    title: 'Counseling Academy',
-    tagline: 'Piattaforma per scuola di counseling',
-    description: 'Sito completo con gestione studenti, corsi a livelli, materiali didattici e calendario eventi integrato con Google Calendar.',
-    icon: GraduationCap,
-    accentColor: 'bg-indigo-500',
-    gradientFrom: 'from-indigo-500',
-    features: ['Area studenti', 'Google Calendar', 'Plugin custom'],
-    stack: ['WordPress', 'PHP', 'JavaScript'],
-  },
-  {
-    id: 'frameaboutyou',
-    title: 'FrameAboutYou',
-    tagline: 'App fotografica per eventi',
-    description: 'I fotografi gestiscono le foto in tempo reale, gli ospiti le vedono subito sul tablet. Funziona anche senza internet.',
-    icon: Camera,
-    accentColor: 'bg-rose-500',
-    gradientFrom: 'from-rose-500',
-    features: ['Sync real-time', 'Offline-first', 'Desktop + Web'],
-    stack: ['React', 'Tauri', 'Flask'],
-  },
-  {
-    id: 'transcrypt',
-    title: 'Transcrypt',
-    tagline: 'Trascrizione audio con AI',
-    description: 'Registri una riunione o un\'intervista, e l\'app la trascrive automaticamente sul tuo PC. Riconosce chi parla e corregge gli errori con AI.',
-    icon: Mic,
-    accentColor: 'bg-violet-500',
-    gradientFrom: 'from-violet-500',
-    features: ['100% locale', 'Riconosce speaker', 'Correzione AI'],
-    stack: ['Python', 'faster-whisper', 'Tauri'],
-  },
-  {
-    id: 'convertifacile',
-    title: 'ConvertiFacile',
-    tagline: 'Convertitore file universale',
-    description: 'Trascina un file e lo converte in qualsiasi formato: foto, PDF, audio, video. Tutto sul tuo PC, senza caricare nulla online.',
-    icon: FileText,
-    accentColor: 'bg-emerald-500',
-    gradientFrom: 'from-emerald-500',
-    features: ['Drag & drop', '30+ formati', 'Zero cloud'],
-    stack: ['Python', 'FastAPI', 'FFmpeg'],
-  },
-  {
-    id: 'lineart-studio',
-    title: 'LineArt Studio',
-    tagline: 'Da foto a disegno vettoriale',
-    description: 'Carica una foto e la trasforma in un\'illustrazione vettoriale SVG stile line art. Perfetto per loghi, stampe e grafiche.',
-    icon: Paintbrush,
-    accentColor: 'bg-amber-500',
-    gradientFrom: 'from-amber-500',
-    features: ['Foto → SVG', 'Editor integrato', 'Export vettoriale'],
-    stack: ['React', 'FastAPI', 'Potrace'],
-  },
-  {
-    id: 'slide-maker',
-    title: 'SlideMaker',
-    tagline: 'Presentazioni da foto in un click',
-    description: 'Dai una cartella di foto e crea automaticamente presentazioni PPTX o video MP4 con transizioni, musica e stili personalizzabili.',
-    icon: Presentation,
-    accentColor: 'bg-cyan-500',
-    gradientFrom: 'from-cyan-500',
-    features: ['PPTX + Video', 'Musica di sfondo', 'Stili custom'],
-    stack: ['Python', 'python-pptx', 'moviepy'],
-  },
-]
+const featured = projects.slice(0, 4)
 
 export function Projects() {
   return (
     <section id="progetti" className="relative py-24 sm:py-32">
-      {/* Section divider */}
       <div className="absolute top-0 left-0 right-0 h-px divider-glow" />
 
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Section header */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -132,9 +31,8 @@ export function Projects() {
           </p>
         </motion.div>
 
-        {/* Projects bento grid */}
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {projects.map((project, index) => (
+        <div className="grid sm:grid-cols-2 gap-6">
+          {featured.map((project, index) => (
             <motion.div
               key={project.id}
               initial={{ opacity: 0, y: 30 }}
@@ -144,12 +42,9 @@ export function Projects() {
               className="group"
             >
               <div className="h-full glass rounded-2xl overflow-hidden relative transition-all duration-500 hover:glow-violet card-3d">
-                {/* Top accent bar */}
                 <div className={`h-1 w-full ${project.accentColor}`} />
 
-                {/* Content */}
                 <div className="p-6 sm:p-8">
-                  {/* Header */}
                   <div className="flex items-start gap-4 mb-4">
                     <motion.div
                       whileHover={{ scale: 1.1, rotate: -5 }}
@@ -166,12 +61,10 @@ export function Projects() {
                     </div>
                   </div>
 
-                  {/* Description */}
                   <p className="text-white/60 mb-6 leading-relaxed">
                     {project.description}
                   </p>
 
-                  {/* Features */}
                   <div className="flex flex-wrap gap-2 mb-6">
                     {project.features.map((feature) => (
                       <span
@@ -183,29 +76,35 @@ export function Projects() {
                     ))}
                   </div>
 
-                  {/* Tech stack */}
                   <div className="flex items-center justify-between">
                     <div className="flex flex-wrap gap-2">
                       {project.stack.map((tech) => (
-                        <span
-                          key={tech}
-                          className="text-xs text-white/40"
-                        >
+                        <span key={tech} className="text-xs text-white/40">
                           {tech}
                         </span>
                       ))}
                     </div>
-                    <motion.div
-                      whileHover={{ x: 5 }}
-                      className="text-white/40 group-hover:text-violet-400 transition-colors"
-                    >
-                      <ExternalLink className="w-5 h-5" />
-                    </motion.div>
+                    {project.url ? (
+                      <a href={project.url} target="_blank" rel="noopener noreferrer">
+                        <motion.div
+                          whileHover={{ x: 5 }}
+                          className="text-white/40 group-hover:text-violet-400 transition-colors"
+                        >
+                          <ExternalLink className="w-5 h-5" />
+                        </motion.div>
+                      </a>
+                    ) : (
+                      <motion.div
+                        whileHover={{ x: 5 }}
+                        className="text-white/40 group-hover:text-violet-400 transition-colors"
+                      >
+                        <ExternalLink className="w-5 h-5" />
+                      </motion.div>
+                    )}
                   </div>
                 </div>
 
-                {/* Hover gradient overlay */}
-                <div 
+                <div
                   className={`absolute inset-0 bg-linear-to-br ${project.gradientFrom} to-transparent opacity-0 group-hover:opacity-5 transition-opacity duration-500 pointer-events-none`}
                 />
               </div>
@@ -213,7 +112,6 @@ export function Projects() {
           ))}
         </div>
 
-        {/* CTA Button */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -221,13 +119,13 @@ export function Projects() {
           transition={{ duration: 0.6, delay: 0.4 }}
           className="text-center mt-12"
         >
-          <a 
-            href="#contatti"
+          <Link
+            href="/progetti"
             className="inline-flex items-center gap-2 px-6 py-3 rounded-full text-sm font-medium bg-white/5 text-white border border-white/10 hover:border-violet-500/50 hover:bg-white/10 transition-all duration-300 group"
           >
             Tutti i progetti
             <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-          </a>
+          </Link>
         </motion.div>
       </div>
     </section>
