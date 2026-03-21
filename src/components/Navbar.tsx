@@ -32,16 +32,16 @@ export default function Navbar() {
       transition={{ duration: 0.6, delay: 0.3 }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled
-          ? 'bg-[var(--background)]/80 backdrop-blur-xl border-b border-[var(--border)]'
+          ? 'bg-background/80 backdrop-blur-xl border-b border-(--border)'
           : 'bg-transparent'
       }`}
     >
       <nav className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16">
         <Link
           href="/"
-          className="text-lg font-display font-bold text-[var(--foreground)] hover:text-[var(--primary)] transition-colors"
+          className="text-lg font-display font-bold text-foreground hover:text-(--primary) transition-colors"
         >
-          FM<span className="text-[var(--primary)]">.</span>
+          FM<span className="text-(--primary)">.</span>
         </Link>
 
         <div className="hidden md:flex items-center gap-8">
@@ -57,8 +57,8 @@ export default function Navbar() {
                 href={href}
                 className={`text-sm font-medium transition-colors ${
                   isActive
-                    ? 'text-[var(--primary)]'
-                    : 'text-neutral-400 hover:text-[var(--foreground)]'
+                    ? 'text-(--primary)'
+                    : 'text-neutral-400 hover:text-foreground'
                 }`}
               >
                 {link.label}
@@ -69,7 +69,7 @@ export default function Navbar() {
 
         <button
           onClick={() => setMobileOpen(!mobileOpen)}
-          className="md:hidden p-2 text-neutral-400 hover:text-[var(--foreground)] transition-colors"
+          className="md:hidden p-2 text-neutral-400 hover:text-foreground transition-colors"
           aria-label="Menu"
         >
           {mobileOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
@@ -81,7 +81,7 @@ export default function Navbar() {
           initial={{ opacity: 0, height: 0 }}
           animate={{ opacity: 1, height: 'auto' }}
           exit={{ opacity: 0, height: 0 }}
-          className="md:hidden bg-[var(--background)]/95 backdrop-blur-xl border-b border-[var(--border)]"
+          className="md:hidden bg-background/95 backdrop-blur-xl border-b border-(--border)"
         >
           <div className="px-4 py-4 space-y-3">
             {links.map((link) => (
@@ -89,7 +89,7 @@ export default function Navbar() {
                 key={link.href}
                 href={link.href}
                 onClick={() => setMobileOpen(false)}
-                className="block text-sm font-medium text-neutral-400 hover:text-[var(--foreground)] transition-colors py-2"
+                className="block text-sm font-medium text-neutral-400 hover:text-foreground transition-colors py-2"
               >
                 {link.label}
               </Link>

@@ -65,7 +65,7 @@ export default function SectionDivider({
           whileInView={{ scaleX: 1, opacity: 1 }}
           transition={{ duration: 1, ease: 'easeOut' }}
           viewport={{ once: true, amount: 0.5 }}
-          className="h-px mx-auto max-w-2xl bg-gradient-to-r from-transparent via-[var(--primary)] to-transparent"
+          className="h-px mx-auto max-w-2xl bg-linear-to-r from-transparent via-(--primary) to-transparent"
         />
       </div>
     )
@@ -80,16 +80,16 @@ export default function SectionDivider({
           whileInView={{ scaleX: 1 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true, amount: 0.5 }}
-          className="h-px w-full max-w-md bg-gradient-to-r from-transparent via-neutral-700 to-transparent"
+          className="h-px w-full max-w-md bg-linear-to-r from-transparent via-neutral-700 to-transparent"
         />
         <motion.div
           initial={{ scale: 0 }}
           whileInView={{ scale: 1 }}
           transition={{ duration: 0.5, delay: 0.4 }}
           viewport={{ once: true, amount: 0.5 }}
-          className="absolute w-2 h-2 rounded-full bg-[var(--primary)]"
+          className="absolute w-2 h-2 rounded-full bg-(--primary)"
         >
-          <div className="absolute inset-0 rounded-full bg-[var(--primary)] animate-ping opacity-30" />
+          <div className="absolute inset-0 rounded-full bg-(--primary) animate-ping opacity-30" />
         </motion.div>
       </div>
     )
@@ -106,9 +106,9 @@ export default function SectionDivider({
         viewport={{ once: true, amount: 0.5 }}
         className="relative h-px mx-auto max-w-3xl"
       >
-        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-[var(--primary)] to-transparent" />
-        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-[var(--primary)] to-transparent blur-sm" />
-        <div className="absolute -inset-1 bg-gradient-to-r from-transparent via-[var(--primary)] to-transparent blur-md opacity-50" />
+        <div className="absolute inset-0 bg-linear-to-r from-transparent via-(--primary) to-transparent" />
+        <div className="absolute inset-0 bg-linear-to-r from-transparent via-(--primary) to-transparent blur-sm" />
+        <div className="absolute -inset-1 bg-linear-to-r from-transparent via-(--primary) to-transparent blur-md opacity-50" />
       </motion.div>
     </div>
   )

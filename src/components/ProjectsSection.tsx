@@ -20,12 +20,12 @@ function ProjectCard({ project, delay }: { project: typeof projects[0]; delay: n
       className="h-full"
     >
       <GlowCard glowColor={project.glowColor} className="rounded-2xl h-full">
-        <div className="rounded-2xl border border-neutral-200 dark:border-[var(--border)] bg-white dark:bg-[var(--surface)] p-6 sm:p-8 h-full transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
-          <div className={`h-1 w-full rounded-full bg-gradient-to-r ${project.accentColor} mb-6`} />
+        <div className="rounded-2xl border border-neutral-200 dark:border-(--border) bg-white dark:bg-(--surface) p-6 sm:p-8 h-full transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
+          <div className={`h-1 w-full rounded-full bg-linear-to-r ${project.accentColor} mb-6`} />
 
           <div className="flex items-center gap-3 mb-3">
             <Icon className="w-6 h-6 text-neutral-600 dark:text-neutral-300" />
-            <h3 className="text-xl sm:text-2xl font-display font-bold text-neutral-800 dark:text-[var(--foreground)]">
+            <h3 className="text-xl sm:text-2xl font-display font-bold text-neutral-800 dark:text-foreground">
               {project.title}
             </h3>
           </div>
@@ -72,7 +72,7 @@ function ProjectCard({ project, delay }: { project: typeof projects[0]; delay: n
 
 export default function ProjectsSection() {
   return (
-    <section id="projects" className="py-32 px-4 sm:px-6 lg:px-8 bg-white dark:bg-[var(--background)]">
+    <section id="projects" className="py-32 px-4 sm:px-6 lg:px-8 bg-white dark:bg-background">
       <div className="max-w-6xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -81,7 +81,7 @@ export default function ProjectsSection() {
           viewport={{ once: true, amount: 0.15 }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-display font-bold text-neutral-800 dark:text-[var(--foreground)] mb-4">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-display font-bold text-neutral-800 dark:text-foreground mb-4">
             Progetti in <span className="text-gradient">movimento</span>
           </h2>
           <p className="text-xl text-neutral-600 dark:text-neutral-400 max-w-2xl mx-auto">
@@ -105,7 +105,7 @@ export default function ProjectsSection() {
           <MagneticButton strength={0.15}>
             <Link
               href="/progetti"
-              className="inline-flex items-center gap-2 px-8 py-4 rounded-xl bg-gradient-to-r from-primary-600 to-secondary-600 text-white font-semibold transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-primary-500/25"
+              className="inline-flex items-center gap-2 px-8 py-4 rounded-xl bg-linear-to-r from-primary-600 to-secondary-600 text-white font-semibold transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-primary-500/25"
             >
               Tutti i progetti
               <ArrowRight className="w-5 h-5" />

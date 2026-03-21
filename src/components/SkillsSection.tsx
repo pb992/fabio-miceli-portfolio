@@ -84,7 +84,7 @@ export default function SkillsSection() {
   }
 
   return (
-    <section id="skills" className="py-20 bg-neutral-50 dark:bg-[var(--background)]">
+    <section id="skills" className="py-20 bg-neutral-50 dark:bg-background">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -93,7 +93,7 @@ export default function SkillsSection() {
           viewport={{ once: true, amount: 0.15 }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-display font-bold text-neutral-800 dark:text-[var(--foreground)] mb-6">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-display font-bold text-neutral-800 dark:text-foreground mb-6">
             Le mie <span className="text-gradient">competenze</span>
           </h2>
           <p className="text-lg sm:text-xl text-neutral-600 dark:text-neutral-400 max-w-3xl mx-auto">
@@ -109,12 +109,12 @@ export default function SkillsSection() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
               viewport={{ once: true, amount: 0.15 }}
-              className="bg-white dark:bg-[var(--surface)] rounded-2xl shadow-sm border border-neutral-200 dark:border-[var(--border)] overflow-hidden"
+              className="bg-white dark:bg-(--surface) rounded-2xl shadow-sm border border-neutral-200 dark:border-(--border) overflow-hidden"
             >
               {/* Category Header - Clickable */}
               <motion.button
                 onClick={() => toggleCategory(category.category)}
-                className="w-full p-4 lg:p-6 flex items-center justify-between hover:bg-neutral-50 dark:hover:bg-[var(--surface-hover)] transition-colors duration-300"
+                className="w-full p-4 lg:p-6 flex items-center justify-between hover:bg-neutral-50 dark:hover:bg-(--surface-hover) transition-colors duration-300"
                 whileHover={{ scale: 1.01 }}
                 whileTap={{ scale: 0.99 }}
               >
@@ -122,7 +122,7 @@ export default function SkillsSection() {
                   <div className={`w-12 h-12 rounded-xl bg-linear-to-r ${category.color} flex items-center justify-center`}>
                     <category.icon className="w-6 h-6 text-white" />
                   </div>
-                  <h3 className="text-xl font-semibold text-neutral-800 dark:text-[var(--foreground)]">
+                  <h3 className="text-xl font-semibold text-neutral-800 dark:text-foreground">
                     {category.category}
                   </h3>
                 </div>
@@ -152,13 +152,13 @@ export default function SkillsSection() {
                             initial={{ opacity: 0, scale: 0.8 }}
                             animate={{ opacity: 1, scale: 1 }}
                             transition={{ duration: 0.4, delay: skillIndex * 0.05 }}
-                            className="group bg-white dark:bg-[var(--surface)] rounded-xl p-3 shadow-sm border border-neutral-200 dark:border-[var(--border)] hover:shadow-md hover:border-primary-200 dark:hover:border-primary-500/30 transition-all duration-300"
+                            className="group bg-white dark:bg-(--surface) rounded-xl p-3 shadow-sm border border-neutral-200 dark:border-(--border) hover:shadow-md hover:border-primary-200 dark:hover:border-primary-500/30 transition-all duration-300"
                           >
                             <div className="flex flex-col items-center justify-center text-center gap-2">
                               <div className="w-10 h-10 rounded-lg bg-linear-to-r from-primary-500 to-primary-600 flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform duration-300">
                                 <skill.icon className="w-5 h-5 text-white" />
                               </div>
-                              <h4 className="font-semibold text-neutral-800 dark:text-[var(--foreground)] group-hover:text-primary-600 dark:group-hover:text-[var(--primary)] transition-colors duration-300">
+                              <h4 className="font-semibold text-neutral-800 dark:text-foreground group-hover:text-primary-600 dark:group-hover:text-(--primary) transition-colors duration-300">
                                 {skill.name}
                               </h4>
                             </div>

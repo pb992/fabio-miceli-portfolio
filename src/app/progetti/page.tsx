@@ -8,7 +8,7 @@ import { projects } from '@/data/projects'
 
 export default function ProgettiPage() {
   return (
-    <main className="min-h-screen bg-[var(--background)]">
+    <main className="min-h-screen bg-background">
       <SpotlightCursor />
 
       <section className="pt-24 pb-16 px-4 sm:px-6 lg:px-8">
@@ -19,7 +19,7 @@ export default function ProgettiPage() {
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
-            <h1 className="text-3xl sm:text-4xl md:text-5xl font-display font-bold text-neutral-800 dark:text-[var(--foreground)] mb-4">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl font-display font-bold text-neutral-800 dark:text-foreground mb-4">
               Tutti i <span className="text-gradient">progetti</span>
             </h1>
             <p className="text-xl text-neutral-600 dark:text-neutral-400 max-w-2xl mx-auto">
@@ -38,12 +38,12 @@ export default function ProgettiPage() {
                   transition={{ duration: 0.5, delay: i * 0.06 }}
                 >
                   <GlowCard glowColor={project.glowColor} className="rounded-2xl h-full">
-                    <div className="rounded-2xl border border-neutral-200 dark:border-[var(--border)] bg-white dark:bg-[var(--surface)] p-6 h-full transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
-                      <div className={`h-1 w-full rounded-full bg-gradient-to-r ${project.accentColor} mb-5`} />
+                    <div className="rounded-2xl border border-neutral-200 dark:border-(--border) bg-white dark:bg-(--surface) p-6 h-full transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
+                      <div className={`h-1 w-full rounded-full bg-linear-to-r ${project.accentColor} mb-5`} />
 
                       <div className="flex items-center gap-3 mb-2">
                         <Icon className="w-5 h-5 text-neutral-600 dark:text-neutral-300" />
-                        <h2 className="text-lg font-display font-bold text-neutral-800 dark:text-[var(--foreground)]">
+                        <h2 className="text-lg font-display font-bold text-neutral-800 dark:text-foreground">
                           {project.title}
                         </h2>
                       </div>

@@ -30,7 +30,7 @@ const duplicatedCollaborations = [...collaborations, ...collaborations]
 
 export default function CollaborationsSection() {
   return (
-    <section className="py-32 px-4 sm:px-6 lg:px-8 bg-neutral-50 dark:bg-[var(--surface)]">
+    <section className="py-32 px-4 sm:px-6 lg:px-8 bg-neutral-50 dark:bg-(--surface)">
       <div className="max-w-6xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -39,7 +39,7 @@ export default function CollaborationsSection() {
           viewport={{ once: true, amount: 0.15 }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-display font-bold text-neutral-800 dark:text-[var(--foreground)] mb-4">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-display font-bold text-neutral-800 dark:text-foreground mb-4">
             <span className="text-gradient">Collaborazioni</span>
           </h2>
           <p className="text-xl text-neutral-600 dark:text-neutral-400">

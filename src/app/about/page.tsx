@@ -32,7 +32,7 @@ const timeline = [
 
 export default function AboutPage() {
   return (
-    <main className="min-h-screen bg-[var(--background)]">
+    <main className="min-h-screen bg-background">
       <SpotlightCursor />
 
       <section className="pt-24 pb-16 px-4 sm:px-6 lg:px-8">
@@ -44,7 +44,7 @@ export default function AboutPage() {
             transition={{ duration: 0.6 }}
             className="mb-16"
           >
-            <h1 className="text-3xl sm:text-4xl md:text-5xl font-display font-bold text-neutral-800 dark:text-[var(--foreground)] mb-6 text-center">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl font-display font-bold text-neutral-800 dark:text-foreground mb-6 text-center">
               Chi <span className="text-gradient">sono</span>
             </h1>
           </motion.div>
@@ -98,7 +98,7 @@ export default function AboutPage() {
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.4, delay: 0.5 + index * 0.1 }}
-                className="text-center p-4 sm:p-6 rounded-2xl border border-neutral-200 dark:border-[var(--border)] bg-neutral-50 dark:bg-[var(--surface)]"
+                className="text-center p-4 sm:p-6 rounded-2xl border border-neutral-200 dark:border-(--border) bg-neutral-50 dark:bg-(--surface)"
               >
                 <p className="text-2xl sm:text-3xl font-display font-bold text-gradient mb-1">
                   {stat.value}
@@ -121,7 +121,7 @@ export default function AboutPage() {
                 className="flex gap-6"
               >
                 <div className="flex flex-col items-center">
-                  <div className="w-3 h-3 rounded-full bg-gradient-to-r from-primary-500 to-secondary-500 flex-shrink-0" />
+                  <div className="w-3 h-3 rounded-full bg-linear-to-r from-primary-500 to-secondary-500 shrink-0" />
                   {i < timeline.length - 1 && (
                     <div className="w-px flex-1 bg-neutral-200 dark:bg-neutral-700 mt-2" />
                   )}
@@ -130,7 +130,7 @@ export default function AboutPage() {
                   <span className="text-xs font-semibold text-primary-500 dark:text-primary-400 uppercase tracking-wider">
                     {item.period}
                   </span>
-                  <h3 className="text-lg font-display font-bold text-neutral-800 dark:text-[var(--foreground)] mt-1 mb-2">
+                  <h3 className="text-lg font-display font-bold text-neutral-800 dark:text-foreground mt-1 mb-2">
                     {item.title}
                   </h3>
                   <p className="text-neutral-600 dark:text-neutral-400 leading-relaxed">
@@ -146,9 +146,9 @@ export default function AboutPage() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.9 }}
-            className="text-center p-8 rounded-2xl border border-neutral-200 dark:border-[var(--border)] bg-neutral-50 dark:bg-[var(--surface)]"
+            className="text-center p-8 rounded-2xl border border-neutral-200 dark:border-(--border) bg-neutral-50 dark:bg-(--surface)"
           >
-            <h3 className="text-xl font-display font-bold text-neutral-800 dark:text-[var(--foreground)] mb-3">
+            <h3 className="text-xl font-display font-bold text-neutral-800 dark:text-foreground mb-3">
               Hai un progetto in mente?
             </h3>
             <p className="text-neutral-600 dark:text-neutral-400 mb-6">
