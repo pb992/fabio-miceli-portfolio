@@ -153,7 +153,7 @@ export function Hero() {
                 alt="Fabio Miceli"
                 width={112}
                 height={112}
-                className="w-full h-full object-cover object-[65%_top]"
+                className="w-full h-full object-cover object-[35%_15%]"
                 priority
               />
             </div>
