@@ -3,6 +3,7 @@
 import { Hero } from '@/components/hero'
 import { Skills } from '@/components/skills'
 import { Philosophy } from '@/components/philosophy'
+import { About } from '@/components/about'
 import { Projects } from '@/components/projects'
 import { Collaborations } from '@/components/collaborations'
 import { CTASection } from '@/components/cta-section'
@@ -22,6 +23,8 @@ export default function Home() {
         <Skills />
         <SectionDivider />
         <Philosophy />
+        <SectionDivider />
+        <About />
         <SectionDivider />
         <Projects />
         <SectionDivider />

@@ -3,6 +3,7 @@
 import { useEffect, useState, useRef } from 'react'
 import { motion } from 'framer-motion'
 import { ChevronDown } from 'lucide-react'
+import Image from 'next/image'
 
 export function Hero() {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 })
@@ -139,6 +140,25 @@ export function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
         >
+          {/* Profile photo */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.6 }}
+            className="mb-6"
+          >
+            <div className="w-24 h-24 sm:w-28 sm:h-28 mx-auto rounded-full overflow-hidden border-2 border-white/20 shadow-lg shadow-violet-500/20">
+              <Image
+                src="/fabio_miceli.jpg"
+                alt="Fabio Miceli"
+                width={112}
+                height={112}
+                className="w-full h-full object-cover object-top"
+                priority
+              />
+            </div>
+          </motion.div>
+
           {/* Main headline */}
           <h1 className="font-(family-name:--font-manrope) text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold leading-tight tracking-tight mb-4">
             <span className="text-white">Il tuo problema è la mia </span>
