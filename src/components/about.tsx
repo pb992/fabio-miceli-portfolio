@@ -53,11 +53,11 @@ export function About() {
             </div>
             <p className="text-white/60 leading-relaxed mb-3">
               Mi chiamo Fabio. Scrivo codice di giorno e suono piano, batteria e chitarra quando stacco.
-              In 4 anni ho lavorato con stack diversi, team diversi e settori diversi.
+              In 4 anni ho lavorato con stack, team e settori diversi.
             </p>
             <p className="text-white/60 leading-relaxed">
-              Sono curioso per natura: ogni progetto nuovo &egrave; un problema nuovo da risolvere,
-              e a me i problemi piacciono. Non &egrave; instabilit&agrave; - &egrave; versatilit&agrave;.
+              Sono curioso per natura: ogni progetto &egrave; una nuova opportunit&agrave; per imparare qualcosa,
+              e a me le sfide piacciono. La versatilit&agrave; &egrave; il mio punto di forza.
             </p>
           </motion.div>
 
