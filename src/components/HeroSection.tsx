@@ -14,7 +14,7 @@ export default function HeroSection() {
   }
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-[var(--background)]">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-background">
       <HeroBackground />
 
       <div className="relative z-20 text-center px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto">
@@ -23,9 +23,9 @@ export default function HeroSection() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
         >
-          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-display font-bold text-[var(--foreground)] mb-6">
-            Trasformo problemi in{' '}
-            <span className="text-gradient">soluzioni</span>.
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-display font-bold text-foreground mb-6">
+            Il tuo problema è la mia{' '}
+            <span className="text-gradient">soluzione</span>.
             <br />
             <span className="text-primary-600">Velocemente</span>.
           </h1>

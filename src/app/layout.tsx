@@ -17,7 +17,7 @@ const manrope = Manrope({
 });
 
 export const metadata: Metadata = {
-  title: "Fabio Miceli - Full-Stack Developer | Trasformo problemi in soluzioni",
+  title: "Fabio Miceli - Full-Stack Developer | Il tuo problema è la mia soluzione",
   description: "Sviluppatore full-stack italiano specializzato in soluzioni rapide e impatto business. WordPress, React, Python. Velocità e precisione per il tuo progetto.",
   keywords: [
     "sviluppatore full-stack",
@@ -44,7 +44,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: "Fabio Miceli - Full-Stack Developer",
-    description: "Trasformo problemi in soluzioni. Velocemente. Sviluppatore full-stack italiano specializzato in impatto business.",
+    description: "Il tuo problema è la mia soluzione. Velocemente. Sviluppatore full-stack italiano specializzato in impatto business.",
     url: "https://fabio-miceli-portfolio.vercel.app",
     siteName: "Fabio Miceli Portfolio",
     images: [
@@ -61,7 +61,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Fabio Miceli - Full-Stack Developer",
-    description: "Trasformo problemi in soluzioni. Velocemente.",
+    description: "Il tuo problema è la mia soluzione. Velocemente.",
     images: ["/og-image.jpg"],
   },
   robots: {
