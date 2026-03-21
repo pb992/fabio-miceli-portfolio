@@ -66,7 +66,7 @@ export const projects: Project[] = [
     gradientFrom: 'from-rose-500',
     features: ['Sync real-time', 'Offline-first', 'Desktop + Web'],
     stack: ['React', 'Tauri', 'Flask'],
-    client: { name: 'Arzillibus', logo: '/logos/arzillibus.png' },
+    client: { name: 'FrameAboutYou', logo: '/logos/frameaboutyou-logo.png' },
   },
   {
     id: 'transcrypt',
