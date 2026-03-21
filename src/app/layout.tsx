@@ -1,6 +1,8 @@
 import type { Metadata, Viewport } from 'next'
 import { Inter, Manrope } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
+import { Navbar } from '@/components/navbar'
+import { FloatingWhatsApp } from '@/components/floating-elements'
 import './globals.css'
 
 const inter = Inter({ 
@@ -54,7 +56,9 @@ export default function RootLayout({
   return (
     <html lang="it" className={`${inter.variable} ${manrope.variable}`}>
       <body className="font-sans antialiased bg-[#0a0a1a] text-white overflow-x-hidden">
+        <Navbar />
         {children}
+        <FloatingWhatsApp />
         <Analytics />
       </body>
     </html>

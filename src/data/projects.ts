@@ -23,7 +23,7 @@ export const projects: Project[] = [
     id: 'serata-perfetta',
     title: 'SerataPerfetta.it',
     tagline: 'Generatore intelligente di serate',
-    description: 'Scegli budget e tema, e l\'app ti genera un programma serale completo con ristoranti, cinema, eventi e attività — tutto con dati reali e mappe.',
+    description: 'Scegli budget e tema, e l\'app ti genera un programma serale completo con ristoranti, cinema, eventi e attività - tutto con dati reali e mappe.',
     icon: PartyPopper,
     accentColor: 'bg-fuchsia-500',
     gradientFrom: 'from-fuchsia-500',

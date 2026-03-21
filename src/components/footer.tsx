@@ -21,7 +21,7 @@ export function Footer() {
             viewport={{ once: true }}
             className="text-sm text-white/40"
           >
-            © 2026 Fabio Miceli — Full-Stack Developer
+            © 2026 Fabio Miceli - Full-Stack Developer
           </motion.p>
 
           {/* Links */}
