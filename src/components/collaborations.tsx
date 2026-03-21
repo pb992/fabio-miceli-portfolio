@@ -9,8 +9,8 @@ const collaborators = [
   { name: 'Gesca S.r.l', logo: '/logos/gesca-logo.png' },
   { name: 'Contrader', logo: '/logos/contrader-logo.jpg' },
   { name: 'DocPozz Counseling Academy', logo: '/logos/counseling-academy.logo.png' },
-  { name: 'Coisystem', logo: '/logos/coisystem.png' },
-  { name: 'Arzillibus', logo: '/logos/arzillibus.png' },
+  { name: 'Coisystem', logo: '/logos/coisystem.png', darkBg: true },
+  { name: 'Arzillibus', logo: '/logos/arzillibus.png', darkBg: true },
   { name: 'VibeCoded Tools', logo: '/logos/vibecoded-tools-logo.jpeg' },
   { name: 'SerataPerfetta', logo: '/logos/serataperfetta-logo.png' },
 ]
@@ -48,12 +48,12 @@ export function Collaborations() {
               className="flex items-center shrink-0 px-6 sm:px-10"
             >
               <div className="group relative flex items-center justify-center">
-                <div className="w-24 h-24 rounded-full bg-white border border-white/20 flex items-center justify-center p-3 group-hover:border-violet-500/40 group-hover:shadow-lg group-hover:shadow-violet-500/10 transition-all duration-300 overflow-hidden">
+                <div className={`w-20 h-20 rounded-full border border-white/20 flex items-center justify-center p-2 group-hover:border-violet-500/40 group-hover:shadow-lg group-hover:shadow-violet-500/10 transition-all duration-300 overflow-hidden ${collab.darkBg ? 'bg-slate-800' : 'bg-white'}`}>
                   <Image
                     src={collab.logo}
                     alt={collab.name}
-                    width={72}
-                    height={72}
+                    width={56}
+                    height={56}
                     className="w-full h-full object-contain"
                   />
                 </div>
