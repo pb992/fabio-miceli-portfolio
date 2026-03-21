@@ -1,31 +1,55 @@
-import SpotlightCursor from '@/components/SpotlightCursor'
-import HeroSection from '@/components/HeroSection'
-import SkillsSection from '@/components/SkillsSection'
-import PhilosophySection from '@/components/PhilosophySection'
-import ProjectsSection from '@/components/ProjectsSection'
-import ClientsMarquee from '@/components/ClientsMarquee'
-import CTASection from '@/components/CTASection'
-import Footer from '@/components/Footer'
-import FloatingWhatsApp from '@/components/FloatingWhatsApp'
-import SectionDivider from '@/components/SectionDivider'
+'use client'
+
+import { Navbar } from '@/components/navbar'
+import { Hero } from '@/components/hero'
+import { Skills } from '@/components/skills'
+import { Philosophy } from '@/components/philosophy'
+import { Projects } from '@/components/projects'
+import { Collaborations } from '@/components/collaborations'
+import { CTASection } from '@/components/cta-section'
+import { Footer } from '@/components/footer'
+import { FloatingWhatsApp, SocialSidebar, SpotlightCursor } from '@/components/floating-elements'
+import { SectionDivider } from '@/components/section-divider'
 
 export default function Home() {
   return (
-    <main className="min-h-screen">
+    <>
+      {/* Global cursor spotlight effect */}
       <SpotlightCursor />
-      <HeroSection />
-      <SectionDivider variant="glow" />
-      <SkillsSection />
-      <SectionDivider variant="orbit" />
-      <ProjectsSection />
-      <SectionDivider variant="gradient" />
-      <ClientsMarquee />
-      <SectionDivider variant="glow" />
-      <PhilosophySection />
-      <SectionDivider variant="orbit" />
-      <CTASection />
-      <Footer />
+      
+      {/* Fixed navigation */}
+      <Navbar />
+      
+      {/* Social sidebar - desktop only */}
+      <SocialSidebar />
+      
+      {/* Floating WhatsApp button */}
       <FloatingWhatsApp />
-    </main>
+      
+      {/* Main content */}
+      <main>
+        <Hero />
+        
+        <SectionDivider />
+        
+        <Skills />
+        
+        <SectionDivider />
+        
+        <Philosophy />
+        
+        <SectionDivider />
+        
+        <Projects />
+        
+        <SectionDivider />
+        
+        <Collaborations />
+        
+        <CTASection />
+      </main>
+      
+      <Footer />
+    </>
   )
 }

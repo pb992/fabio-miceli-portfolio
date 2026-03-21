@@ -1,0 +1,27 @@
+LOGO URLs FOUND
+===============
+Date: 2026-03-09
+
+--- ARZILLIBUS ---
+Website: https://www.arzillibus.com/
+
+Header logo (300x158):
+https://www.arzillibus.com/wp-content/uploads/2022/08/Logo-ArzilliBus-300x158.png
+
+Footer logo (full size):
+https://www.arzillibus.com/wp-content/uploads/2022/08/Logo-ArzilliBus.png
+
+Other logo (Nuovo-Logo):
+https://www.arzillibus.com/wp-content/uploads/2024/12/Nuovo-Logo.png
+
+--- COISYSTEM ---
+Website: https://www.coisystem.it/
+
+Primary logo (from uploads):
+http://www.coisystem.it/wp-content/uploads/2018/09/logo.png
+
+Primary logo (from theme):
+https://www.coisystem.it/wp-content/themes/buildpro/images/logo-2.png
+
+Footer logo (white version):
+https://www.coisystem.it/wp-content/uploads/2018/10/logo-white.png

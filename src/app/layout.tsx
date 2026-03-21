@@ -1,97 +1,62 @@
-import type { Metadata } from "next";
-import { Inter, Manrope } from "next/font/google";
-import "./globals.css";
-import SocialSidebar from "@/components/SocialSidebar";
-import Navbar from "@/components/Navbar";
+import type { Metadata, Viewport } from 'next'
+import { Inter, Manrope } from 'next/font/google'
+import { Analytics } from '@vercel/analytics/next'
+import './globals.css'
 
-const inter = Inter({
-  subsets: ["latin"],
-  variable: "--font-inter",
-  display: "swap",
-});
+const inter = Inter({ 
+  subsets: ['latin'],
+  variable: '--font-inter',
+  display: 'swap',
+})
 
-const manrope = Manrope({
-  subsets: ["latin"],
-  variable: "--font-manrope",
-  display: "swap",
-});
+const manrope = Manrope({ 
+  subsets: ['latin'],
+  variable: '--font-manrope',
+  display: 'swap',
+})
 
 export const metadata: Metadata = {
-  title: "Fabio Miceli - Full-Stack Developer | Il tuo problema è la mia soluzione",
-  description: "Sviluppatore full-stack italiano specializzato in soluzioni rapide e impatto business. WordPress, React, Python. Velocità e precisione per il tuo progetto.",
-  keywords: [
-    "sviluppatore full-stack",
-    "WordPress",
-    "React",
-    "Python",
-    "Flask",
-    "TypeScript",
-    "sviluppo web",
-    "consulenza tecnica",
-    "Italia"
-  ],
-  authors: [{ name: "Fabio Miceli" }],
-  creator: "Fabio Miceli",
-  publisher: "Fabio Miceli",
-  formatDetection: {
-    email: false,
-    address: false,
-    telephone: false,
-  },
-  metadataBase: new URL("https://fabio-miceli-portfolio.vercel.app"),
-  alternates: {
-    canonical: "/",
-  },
+  title: 'Fabio Miceli | Full-Stack Developer Freelance',
+  description: 'Il tuo problema è la mia soluzione. Dev + Design + metodologia agile = Impatto business in tempi da freelance.',
+  keywords: ['full-stack developer', 'freelance', 'React', 'Next.js', 'TypeScript', 'web development', 'Italia'],
+  authors: [{ name: 'Fabio Miceli' }],
+  creator: 'Fabio Miceli',
   openGraph: {
-    title: "Fabio Miceli - Full-Stack Developer",
-    description: "Il tuo problema è la mia soluzione. Velocemente. Sviluppatore full-stack italiano specializzato in impatto business.",
-    url: "https://fabio-miceli-portfolio.vercel.app",
-    siteName: "Fabio Miceli Portfolio",
-    images: [
-      {
-        url: "/og-image.jpg",
-        width: 1200,
-        height: 630,
-        alt: "Fabio Miceli - Full-Stack Developer",
-      },
-    ],
-    locale: "it_IT",
-    type: "website",
+    type: 'website',
+    locale: 'it_IT',
+    title: 'Fabio Miceli | Full-Stack Developer Freelance',
+    description: 'Dev + Design + metodologia agile = Impatto business in tempi da freelance.',
+    siteName: 'Fabio Miceli Portfolio',
   },
   twitter: {
-    card: "summary_large_image",
-    title: "Fabio Miceli - Full-Stack Developer",
-    description: "Il tuo problema è la mia soluzione. Velocemente.",
-    images: ["/og-image.jpg"],
+    card: 'summary_large_image',
+    title: 'Fabio Miceli | Full-Stack Developer Freelance',
+    description: 'Dev + Design + metodologia agile = Impatto business in tempi da freelance.',
   },
   robots: {
     index: true,
     follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      "max-video-preview": -1,
-      "max-image-preview": "large",
-      "max-snippet": -1,
-    },
   },
-  verification: {
-    google: "your-google-verification-code",
-  },
-};
+}
+
+export const viewport: Viewport = {
+  themeColor: '#0a0a1a',
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 5,
+}
 
 export default function RootLayout({
   children,
 }: Readonly<{
-  children: React.ReactNode;
+  children: React.ReactNode
 }>) {
   return (
-    <html lang="it" className={`dark ${inter.variable} ${manrope.variable}`}>
-      <body className="font-sans antialiased">
-        <Navbar />
+    <html lang="it" className={`${inter.variable} ${manrope.variable}`}>
+      <body className="font-sans antialiased bg-[#0a0a1a] text-white overflow-x-hidden">
         {children}
-        <SocialSidebar />
+        <Analytics />
       </body>
     </html>
-  );
+  )
 }
