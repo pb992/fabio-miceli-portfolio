@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { Menu, X } from 'lucide-react'
+import { Menu, X, Globe, ChevronDown } from 'lucide-react'
 import Link from 'next/link'
 import { useTranslations, useLocale } from 'next-intl'
 import { useRouter, usePathname } from '@/i18n/navigation'
@@ -30,8 +30,8 @@ export function Navbar() {
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
-  const toggleLocale = () => {
-    router.replace(pathname, { locale: locale === 'it' ? 'en' : 'it' })
+  const changeLocale = (newLocale: string) => {
+    router.replace(pathname, { locale: newLocale as 'it' | 'en' })
   }
 
   return (
@@ -76,12 +76,18 @@ export function Navbar() {
                   <span className="absolute -bottom-1 left-0 w-0 h-px bg-linear-to-r from-violet-500 to-blue-500 group-hover:w-full transition-all duration-300" />
                 </Link>
               ))}
-              <button
-                onClick={toggleLocale}
-                className="px-3 py-1.5 rounded-full text-xs font-semibold text-white/70 hover:text-white border border-white/20 hover:border-violet-500/50 transition-all duration-300 uppercase tracking-wider"
-              >
-                {locale === 'it' ? 'EN' : 'IT'}
-              </button>
+              <div className="relative flex items-center">
+                <Globe className="w-4 h-4 text-white/50 absolute left-2.5 pointer-events-none" />
+                <select
+                  value={locale}
+                  onChange={(e) => changeLocale(e.target.value)}
+                  className="appearance-none bg-transparent pl-8 pr-6 py-1.5 rounded-full text-xs font-semibold text-white/70 border border-white/20 hover:border-violet-500/50 transition-all duration-300 uppercase tracking-wider cursor-pointer focus:outline-none focus:border-violet-500/50"
+                >
+                  <option value="it" className="bg-[#0a0a1a] text-white">IT</option>
+                  <option value="en" className="bg-[#0a0a1a] text-white">EN</option>
+                </select>
+                <ChevronDown className="w-3 h-3 text-white/50 absolute right-2 pointer-events-none" />
+              </div>
               <Link href="#contatti">
                 <motion.button
                   whileHover={{ scale: 1.02 }}
@@ -137,12 +143,18 @@ export function Navbar() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.3 }}
               >
-                <button
-                  onClick={() => { toggleLocale(); setIsMobileMenuOpen(false) }}
-                  className="px-6 py-2 rounded-full text-base font-semibold text-white/70 border border-white/20 uppercase tracking-wider"
-                >
-                  {locale === 'it' ? 'EN' : 'IT'}
-                </button>
+                <div className="relative flex items-center">
+                  <Globe className="w-5 h-5 text-white/50 absolute left-4 pointer-events-none" />
+                  <select
+                    value={locale}
+                    onChange={(e) => { changeLocale(e.target.value); setIsMobileMenuOpen(false) }}
+                    className="appearance-none bg-transparent pl-12 pr-10 py-3 rounded-full text-base font-semibold text-white/70 border border-white/20 uppercase tracking-wider cursor-pointer focus:outline-none"
+                  >
+                    <option value="it" className="bg-[#0a0a1a] text-white">Italiano</option>
+                    <option value="en" className="bg-[#0a0a1a] text-white">English</option>
+                  </select>
+                  <ChevronDown className="w-4 h-4 text-white/50 absolute right-4 pointer-events-none" />
+                </div>
               </motion.div>
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
