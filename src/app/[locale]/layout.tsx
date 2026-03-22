@@ -72,7 +72,7 @@ export default async function LocaleLayout({
   const messages = await getMessages()
 
   return (
-    <html lang={locale} className={`${inter.variable} ${manrope.variable}`}>
+    <html lang={locale} className={`${inter.variable} ${manrope.variable}`} data-scroll-behavior="smooth">
       <body className="font-sans antialiased bg-[#0a0a1a] text-white overflow-x-hidden">
         <NextIntlClientProvider messages={messages}>
           <Navbar />

@@ -57,15 +57,13 @@ export default function ProgettiPage() {
                 transition={{ duration: 0.5, delay: index * 0.06 }}
                 className="group"
               >
-                <div className="h-full glass rounded-2xl overflow-hidden relative transition-all duration-500 hover:glow-violet card-3d shimmer">
+                <div className="h-full glass rounded-2xl overflow-hidden relative transition-all duration-500 hover:glow-violet hover:scale-[1.02] card-3d shimmer">
                   <div className={`h-1 w-full ${project.accentColor}`} />
 
                   <div className="p-6">
                     <div className="flex items-start gap-3 mb-3">
-                      <div
-                        className={`w-10 h-10 rounded-lg bg-linear-to-br ${project.gradientFrom} to-transparent/50 flex items-center justify-center shrink-0`}
-                      >
-                        <project.icon className="w-5 h-5 text-white" />
+                      <div className="shrink-0 mt-0.5">
+                        <project.icon className="w-5 h-5 text-white/70" strokeWidth={1.5} />
                       </div>
                       <div>
                         <h2 className="text-lg font-bold text-white group-hover:text-violet-300 transition-colors">

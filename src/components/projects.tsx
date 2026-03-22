@@ -59,18 +59,14 @@ export function Projects() {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 className="group"
               >
-                <div className="h-full glass rounded-2xl overflow-hidden relative transition-all duration-500 hover:glow-violet card-3d shimmer">
+                <div className="h-full glass rounded-2xl overflow-hidden relative transition-all duration-500 hover:glow-violet hover:scale-[1.02] card-3d shimmer">
                   <div className={`h-1 w-full ${project.accentColor}`} />
 
                   <div className="p-6 sm:p-8">
-                    <div className="flex items-start gap-4 mb-4">
-                      <motion.div
-                        whileHover={{ scale: 1.1, rotate: -5 }}
-                        transition={{ type: 'spring', stiffness: 400, damping: 17 }}
-                        className={`w-12 h-12 rounded-xl bg-linear-to-br ${project.gradientFrom} to-transparent/50 flex items-center justify-center shrink-0`}
-                      >
-                        <project.icon className="w-6 h-6 text-white" />
-                      </motion.div>
+                    <div className="flex items-start gap-3 mb-4">
+                      <div className="shrink-0 mt-1">
+                        <project.icon className={`w-5 h-5 text-white/70`} strokeWidth={1.5} />
+                      </div>
                       <div>
                         <h3 className="text-xl font-bold text-white group-hover:text-violet-300 transition-colors">
                           {project.title}
