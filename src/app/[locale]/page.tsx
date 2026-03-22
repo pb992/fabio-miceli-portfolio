@@ -10,10 +10,12 @@ import { CTASection } from '@/components/cta-section'
 import { Footer } from '@/components/footer'
 import { SocialSidebar, SpotlightCursor } from '@/components/floating-elements'
 import { SectionDivider } from '@/components/section-divider'
+import { Particles } from '@/components/particles'
 
 export default function Home() {
   return (
     <>
+      <Particles />
       <SpotlightCursor />
       <SocialSidebar />
 

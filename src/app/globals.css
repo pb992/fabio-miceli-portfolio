@@ -201,3 +201,64 @@
   transform-style: preserve-3d;
   perspective: 1000px;
 }
+
+/* Floating particles */
+@keyframes particle-float {
+  0%, 100% { transform: translateY(0) translateX(0); opacity: 0; }
+  10% { opacity: 1; }
+  90% { opacity: 0.6; }
+  100% { transform: translateY(-100vh) translateX(30px); opacity: 0; }
+}
+
+.particle {
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  background: rgba(129, 140, 248, 0.5);
+  border-radius: 50%;
+  animation: particle-float var(--duration, 15s) infinite;
+  animation-delay: var(--delay, 0s);
+}
+
+/* Shimmer effect on cards */
+.shimmer {
+  position: relative;
+  overflow: hidden;
+}
+
+.shimmer::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    45deg,
+    transparent,
+    rgba(129, 140, 248, 0.05),
+    transparent
+  );
+  transform: rotate(45deg) translateX(-100%);
+  transition: none;
+  pointer-events: none;
+}
+
+.shimmer:hover::after {
+  animation: shimmer-slide 0.8s ease-out;
+}
+
+@keyframes shimmer-slide {
+  0% { transform: rotate(45deg) translateX(-100%); }
+  100% { transform: rotate(45deg) translateX(100%); }
+}
+
+/* Moving grid background */
+@keyframes grid-move {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(50px); }
+}
+
+.grid-animated {
+  animation: grid-move 20s linear infinite;
+}

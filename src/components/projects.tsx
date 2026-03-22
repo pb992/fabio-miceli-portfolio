@@ -59,7 +59,7 @@ export function Projects() {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 className="group"
               >
-                <div className="h-full glass rounded-2xl overflow-hidden relative transition-all duration-500 hover:glow-violet card-3d">
+                <div className="h-full glass rounded-2xl overflow-hidden relative transition-all duration-500 hover:glow-violet card-3d shimmer">
                   <div className={`h-1 w-full ${project.accentColor}`} />
 
                   <div className="p-6 sm:p-8">

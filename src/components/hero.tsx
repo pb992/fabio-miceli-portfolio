@@ -124,7 +124,7 @@ export function Hero() {
 
         {/* Grid overlay */}
         <div
-          className="absolute inset-0 opacity-[0.02]"
+          className="absolute inset-0 opacity-[0.02] grid-animated"
           style={{
             backgroundImage: `
               linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px),
