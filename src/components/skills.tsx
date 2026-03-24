@@ -57,11 +57,9 @@ export function Skills() {
 
   return (
     <section id="skills" className="relative py-24 sm:py-32">
-      {/* Section divider top */}
       <div className="absolute top-0 left-0 right-0 h-px divider-glow" />
 
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Section header */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -80,52 +78,6 @@ export function Skills() {
           </p>
         </motion.div>
 
-        {/* Workspace illustration */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true, amount: 0.3 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-          className="mb-12"
-        >
-          <svg viewBox="0 0 800 120" fill="none" className="w-full max-w-3xl mx-auto opacity-40">
-            {/* Desk surface */}
-            <rect x="50" y="95" width="700" height="2" rx="1" fill="rgba(129,140,248,0.2)" />
-            {/* Laptop */}
-            <rect x="280" y="30" width="240" height="150" rx="8" fill="rgba(129,140,248,0.06)" stroke="rgba(129,140,248,0.2)" strokeWidth="1.2" />
-            <rect x="280" y="30" width="240" height="14" rx="8" fill="rgba(129,140,248,0.08)" />
-            <rect x="280" y="38" width="240" height="6" fill="rgba(129,140,248,0.08)" />
-            {/* Screen dots */}
-            <circle cx="294" cy="37" r="2" fill="rgba(239,68,68,0.4)" />
-            <circle cx="302" cy="37" r="2" fill="rgba(234,179,8,0.4)" />
-            <circle cx="310" cy="37" r="2" fill="rgba(34,197,94,0.4)" />
-            {/* Code lines on screen */}
-            <rect x="298" y="52" width="50" height="2.5" rx="1" fill="rgba(129,140,248,0.2)" />
-            <rect x="306" y="60" width="80" height="2.5" rx="1" fill="rgba(96,165,250,0.15)" />
-            <rect x="306" y="68" width="60" height="2.5" rx="1" fill="rgba(34,211,238,0.15)" />
-            <rect x="306" y="76" width="90" height="2.5" rx="1" fill="rgba(129,140,248,0.12)" />
-            <rect x="298" y="84" width="40" height="2.5" rx="1" fill="rgba(129,140,248,0.2)" />
-            {/* Keyboard base */}
-            <rect x="300" y="92" width="200" height="3" rx="1.5" fill="rgba(129,140,248,0.1)" />
-            {/* Coffee cup */}
-            <circle cx="170" cy="75" r="18" fill="rgba(245,158,11,0.05)" stroke="rgba(245,158,11,0.2)" strokeWidth="1" />
-            <circle cx="170" cy="75" r="10" fill="rgba(245,158,11,0.08)" />
-            {/* Steam */}
-            <path d="M165 55 Q167 48 170 52 Q173 48 175 55" stroke="rgba(245,158,11,0.15)" strokeWidth="1" fill="none" />
-            {/* Mouse */}
-            <rect x="590" y="65" width="22" height="32" rx="11" fill="rgba(129,140,248,0.05)" stroke="rgba(129,140,248,0.15)" strokeWidth="1" />
-            <line x1="601" y1="68" x2="601" y2="78" stroke="rgba(129,140,248,0.15)" strokeWidth="0.8" />
-            {/* Phone */}
-            <rect x="650" y="55" width="24" height="40" rx="4" fill="rgba(34,211,238,0.04)" stroke="rgba(34,211,238,0.15)" strokeWidth="1" />
-            <rect x="656" y="62" width="12" height="2" rx="1" fill="rgba(34,211,238,0.1)" />
-            <rect x="656" y="67" width="8" height="2" rx="1" fill="rgba(34,211,238,0.08)" />
-            {/* Plant */}
-            <circle cx="100" cy="70" r="14" fill="rgba(34,197,94,0.05)" stroke="rgba(34,197,94,0.15)" strokeWidth="1" />
-            <path d="M95 72 Q100 55 105 72" stroke="rgba(34,197,94,0.25)" strokeWidth="1.2" fill="none" />
-            <path d="M98 68 Q100 60 102 68" stroke="rgba(34,197,94,0.2)" strokeWidth="1" fill="none" />
-          </svg>
-        </motion.div>
-
         {/* Skills accordion */}
         <div className="space-y-4">
           {skillCategories.map((category, index) => (
@@ -141,17 +93,15 @@ export function Skills() {
                   openId === category.id ? 'glow-violet' : ''
                 }`}
               >
-                {/* Accordion header */}
                 <button
                   onClick={() => toggleCategory(category.id)}
                   className="w-full p-6 flex items-center gap-4 group"
                 >
-                  {/* Icon in circle */}
+                  {/* Icon */}
                   <div className={`w-12 h-12 rounded-full bg-linear-to-br ${category.gradient} flex items-center justify-center shrink-0 shadow-lg group-hover:scale-110 transition-transform duration-300`}>
                     <category.icon className="w-5 h-5 text-white" strokeWidth={1.5} />
                   </div>
 
-                  {/* Title & description */}
                   <div className="flex-1 text-left">
                     <h3 className="text-lg font-semibold text-white group-hover:text-violet-300 transition-colors">
                       {category.title}
@@ -161,7 +111,6 @@ export function Skills() {
                     </p>
                   </div>
 
-                  {/* Chevron */}
                   <motion.div
                     animate={{ rotate: openId === category.id ? 180 : 0 }}
                     transition={{ duration: 0.3 }}
@@ -170,7 +119,6 @@ export function Skills() {
                   </motion.div>
                 </button>
 
-                {/* Accordion content */}
                 <AnimatePresence>
                   {openId === category.id && (
                     <motion.div
@@ -203,7 +151,6 @@ export function Skills() {
           ))}
         </div>
 
-        {/* CTA Button */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}

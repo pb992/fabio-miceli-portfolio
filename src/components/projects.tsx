@@ -64,8 +64,8 @@ export function Projects() {
 
                   <div className="p-6 sm:p-8">
                     <div className="flex items-start gap-3 mb-4">
-                      <div className="shrink-0 mt-1">
-                        <project.icon className={`w-5 h-5 text-white/70`} strokeWidth={1.5} />
+                      <div className={`shrink-0 w-10 h-10 rounded-xl bg-linear-to-br ${project.gradientFrom} to-transparent/50 flex items-center justify-center`}>
+                        <project.icon className="w-5 h-5 text-white" strokeWidth={1.5} />
                       </div>
                       <div>
                         <h3 className="text-xl font-bold text-white group-hover:text-violet-300 transition-colors">

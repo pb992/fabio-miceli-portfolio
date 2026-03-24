@@ -1,8 +1,8 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { Music, Dumbbell, MapPin, Code, Users, Zap } from 'lucide-react'
 import Image from 'next/image'
+import { Music, Dumbbell, MapPin } from 'lucide-react'
 import { useTranslations } from 'next-intl'
 
 const cardVariants = {
@@ -12,6 +12,33 @@ const cardVariants = {
     y: 0,
     transition: { duration: 0.5, delay: i * 0.1 },
   }),
+}
+
+function WorkstyleSvg() {
+  return (
+    <svg viewBox="0 0 120 60" fill="none" className="w-full h-full">
+      {/* Desk */}
+      <rect x="10" y="44" width="100" height="2" rx="1" fill="rgba(129,140,248,0.35)" />
+      {/* Laptop */}
+      <rect x="20" y="14" width="55" height="30" rx="3" fill="rgba(129,140,248,0.12)" stroke="rgba(129,140,248,0.45)" strokeWidth="1.2" />
+      <rect x="20" y="14" width="55" height="7" rx="3" fill="rgba(129,140,248,0.18)" />
+      <circle cx="26" cy="17.5" r="1.2" fill="rgba(239,68,68,0.5)" />
+      <circle cx="30.5" cy="17.5" r="1.2" fill="rgba(234,179,8,0.5)" />
+      <circle cx="35" cy="17.5" r="1.2" fill="rgba(34,197,94,0.5)" />
+      {/* Code lines */}
+      <rect x="26" y="26" width="22" height="2" rx="0.5" fill="rgba(129,140,248,0.35)" />
+      <rect x="30" y="31" width="35" height="2" rx="0.5" fill="rgba(96,165,250,0.3)" />
+      <rect x="30" y="36" width="25" height="2" rx="0.5" fill="rgba(34,211,238,0.3)" />
+      {/* Chat bubble */}
+      <rect x="84" y="16" width="24" height="14" rx="4" fill="rgba(34,197,94,0.1)" stroke="rgba(34,197,94,0.4)" strokeWidth="1" />
+      <rect x="88" y="20" width="12" height="1.5" rx="0.5" fill="rgba(34,197,94,0.35)" />
+      <rect x="88" y="24" width="16" height="1.5" rx="0.5" fill="rgba(34,197,94,0.25)" />
+      {/* Connection line */}
+      <path d="M75 26 L84 22" stroke="rgba(34,197,94,0.3)" strokeWidth="0.8" strokeDasharray="2 1.5" />
+      {/* Keyboard */}
+      <rect x="30" y="44" width="35" height="3" rx="1.5" fill="rgba(129,140,248,0.15)" />
+    </svg>
+  )
 }
 
 export function About() {
@@ -62,12 +89,7 @@ export function About() {
                 </div>
               </div>
               <div>
-                <div className="flex items-center gap-3 mb-4">
-                  <div className="w-10 h-10 rounded-xl bg-linear-to-br from-violet-500 to-blue-500 flex items-center justify-center">
-                    <Code className="w-5 h-5 text-white" />
-                  </div>
-                  <h3 className="text-lg font-bold text-white">{t('bioTitle')}</h3>
-                </div>
+                <h3 className="text-lg font-bold text-white mb-4">{t('bioTitle')}</h3>
                 <p className="text-white/60 leading-relaxed mb-3">
                   {t('bio1')}
                 </p>
@@ -147,7 +169,7 @@ export function About() {
             </p>
           </motion.div>
 
-          {/* Work style - full width */}
+          {/* Work style - full width with SVG and centered text */}
           <motion.div
             custom={5}
             initial="hidden"
@@ -157,15 +179,10 @@ export function About() {
             className="sm:col-span-2 lg:col-span-3 glass rounded-2xl p-6 sm:p-8"
           >
             <div className="flex flex-col sm:flex-row items-center gap-6 text-center sm:text-left">
-              <div className="flex gap-3 shrink-0">
-                <div className="w-12 h-12 rounded-xl bg-linear-to-br from-amber-500 to-orange-500 flex items-center justify-center">
-                  <Zap className="w-6 h-6 text-white" />
-                </div>
-                <div className="w-12 h-12 rounded-xl bg-linear-to-br from-emerald-500 to-teal-500 flex items-center justify-center">
-                  <Users className="w-6 h-6 text-white" />
-                </div>
+              <div className="w-40 h-24 shrink-0 rounded-xl bg-white/5 border border-white/10 p-2">
+                <WorkstyleSvg />
               </div>
-              <div>
+              <div className="flex-1">
                 <h3 className="text-lg font-bold text-white mb-2">{t('workTitle')}</h3>
                 <p className="text-white/50 leading-relaxed">
                   {t('workDescription')}
